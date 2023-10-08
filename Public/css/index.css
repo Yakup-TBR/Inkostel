@@ -1,4 +1,82 @@
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 27px; /* Atur sesuai kebutuhan Anda */
+    
+    background: #FDF0D5;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+button{
+    width:90px;
+    height: auto;
+    margin: auto;
+    outline-color: gray;
+}
+
+.nav-links h5 {
+    margin: 0 30px; /* Atur jarak antara "Home" dan "About Us" */
+
+}
+
+.nav-button {
+    margin-left: 10px; /* Atur jarak dari tombol ke elemen lainnya */
+}
+
 .logo {
     width: 150px; 
     height: auto; 
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Memastikan footer tetap di bawah jika konten tidak penuh tinggi layar. */
+}
+
+
+
+.welcome {
+    float: left;
+    width: 50%; /* Menggunakan 50% dari lebar kontainer */
+    padding-top: 40px;
+    padding-left: 70px;
+}
+
+.kosan {
+    float: right;
+    width: 30%; /* Menggunakan 50% dari lebar kontainer */
+    padding-top: 40px;
+    padding-right: 70px;
+
+}
+
+
+/* Membersihkan float untuk menghindari masalah layout */
+main::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer{
+    margin-top: 50px;
+    background-color: gray;
 }
