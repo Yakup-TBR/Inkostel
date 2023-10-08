@@ -1,0 +1,64 @@
+/* CSS awal header */
+.header {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    transition: transform 0.6s ease-in-out;
+}
+
+.header p {
+    padding-top: 40px;
+    font-size: 20px;
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Mengatur form-container untuk berada di tengah halaman */
+/* CSS awal form-container */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+/* CSS ketika tombol "Sign Up" ditekan */
+.form-container.signup-active {
+    transform: translateX(-100%);
+}
+
+/* Mengatur logo */
+.center-content {
+    position: relative;
+    text-align: center;
+    height: 100px;
+}
+
+.centered {
+    position: absolute;
+    top: 50%; /* Menyesuaikan posisi ke tengah vertikal */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Mengatur input */
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Mengatur ukuran tombol */
+.equal-size-btn {
+    width: 200px;
+    height: 50px;
+}
