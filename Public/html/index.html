@@ -5,49 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Inkostel</title>
 
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   
   <body>
+    <!-- header -->
     <header>
-      <nav class="nav-container">
-          <img src="../img/Logo_Kostel.png" alt="Logo_inkostel" class="logo">
-          <div class="nav-links">
-              <h5><a>Home</a></h5>
-              <h5><a>About Us</a></h5>
-          </div>
-          <div class="nav-button">
-            <button type="button" class="btn btn-outline-secondary">Login</button>          
-          </div>
-      </nav>
-  </header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 logo">
+                    <img src="../img/Logo_Kostel.png" alt="Logo KosTel"></img>
+                </div>
+                <div class="col-md-8 d-flex justify-content-end align-items-center">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/about">About Us</a>
+                        </li>
+                    </ul>
+                </div>
 
-  <main class="clearfix">
-    <div class="welcome">
-      <h1>Welcome To InKosTel</h1>
-      <p>
-        Lorem ipsum bintang ngetroll
-      </p>
-    </div>
-    <div class="gambar">
-      <img src="../img/gambar kos.jpg" alt="slide_kos" class="kosan">
-    </div>
+                <div class="d-flex justify-content-end">
+                    <a href="#"><i class="btn btn-outline-light">Login</i></a>
+                </div>
+            </div>
+        </div>
+    </header>
 
-    </div>
-  </main>
-   
-  <footer>
-    <div class="container">
-      <img src="../img/Logo_Kostel.png" alt="Logo_inkostel" class="logo">
-    </div>
-  </footer>
+    <!-- isi -->
+    <section class="about section-padding" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                    <div class="about-text">
+                        <h2>Welcome To KosTel</h2>
+                        <p>Lorem ipsum, dolor sit amet
+                        consectetur adipisicing elit. Totam, 
+                        labore reiciendis. Assumenda eos quod
+                        animi! Soluta nesciunt inventore dolores
+                        excepturi provident, culpa beatae tempora,
+                        explicabo corporis quibusdam corrupti. Autem, quaerat.
+                        Assumenda quo aliquam vel, nostrum explicabo ipsum dolor,
+                        ipsa perferendis porro doloribus obcaecati placeat natus iste odio est non earum?</p>
+                        <a class="btn btn-warning" href="#">Cari Kosan Sekarang!</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="about-img"><img alt="" class="img-fluid" src="../img/gambar kos.jpg"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="logo-footer">
+                        <img src="../img/Logo_Kostel.png" alt="logofooter" >
+                    </div>
+                <div class="footer-col">
+                    
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
-   <!--Javascript-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
-    crossorigin="anonymous"></script>
-    -->
-    <!--Akhir Javascript-->
 </html>
