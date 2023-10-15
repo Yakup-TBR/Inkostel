@@ -6,8 +6,7 @@ header {
     align-items: center;
     position: fixed;
     z-index: 50;
-    box-shadow: 0 0 10px #000;
-    background: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to right, #73E2A7, #2E86DE);
 }
     
 header .container {
