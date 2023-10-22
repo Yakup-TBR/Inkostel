@@ -1,9 +1,4 @@
 /*header*/
-
-/*ubah*/
-
-
-
 body{
     display: flex;
     flex-direction: column;
@@ -16,7 +11,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    position: static;
     z-index: 50;
     background: #73E2A7;
 }
@@ -45,7 +40,7 @@ header .logo {
     position: relative;
     display: flex;
     align-items: center;
-    margin-right: 300px;
+    margin-right: 300px auto;
     margin-left: 80px;
     margin-top: 39px;
 }
@@ -54,6 +49,8 @@ header .logo {
     color: #fff;
     text-decoration: none;
 }
+
+
 
 .d-flex.justify-content-end {
     margin-top: -45px;
@@ -95,7 +92,7 @@ header .logo {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin-top: 20px; 
+    margin-top: 3px; 
     border: none;
     border-radius: 5px; 
 }
@@ -116,20 +113,14 @@ header .logo {
 }
 
 
-.container{
-	max-width: 1170px;
-	margin:auto;
-}
 
-/*footer*/
-
+/*footer start*/
 .footer{
 	background-color: #333;
     color: #fff;
     padding: 20px 0;
-    position: absolute; /*bisa absolute / static*/
+    position: static; /*bisa absolute / static*/
     bottom: 0;
-    width: 100%;
 }
 
 .footer .row {
@@ -141,7 +132,7 @@ header .logo {
 
 .footer-col {
     flex: 1;
-    margin: 0 15px;
+    margin: 0 40px;
 }
 
 .logo-footer img {
@@ -168,9 +159,6 @@ header .logo {
 	width: 80px;
 }
 
-.footer-col ul li:not(:last-child){
-	margin-bottom: 10px;
-}
 
 .footer-col ul li a{
 	font-size: 16px;
@@ -205,3 +193,5 @@ header .logo {
     color: #24262b;
     background-color: #ffffff;
 }
+
+/*Footer End*/
