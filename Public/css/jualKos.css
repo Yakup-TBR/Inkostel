@@ -26,19 +26,16 @@
   margin-left: -110px;
 }
 
+
+
 .search input {
   border: 2px solid #C0EEE4; 
 }
 
-.search .submit{
-  background-image: url('../img/button_search.png'); 
+.search .btn{ 
   margin-left: 10px;
-  background-size: cover; 
-  text-indent: -9999px;
-  border: none; 
-  padding: 0; 
-  width: 30px; 
-  height: 30px; 
+  width: 40px; 
+  height: 40px; 
 }
 
 .nav-item {
