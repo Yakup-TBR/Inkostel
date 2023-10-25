@@ -1,4 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
+/* header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px; 
+}
   /* Gaya untuk Kolom Gambar dan Karusel */
 .image-carousel {
     display: flex;
