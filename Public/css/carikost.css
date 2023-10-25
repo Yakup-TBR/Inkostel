@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
+/* header */
 .header {
   display: flex;
   align-items: center;
@@ -7,15 +8,17 @@
   padding: 10px; 
 }
 
+/* logo navbar */
 .logo img {
   flex: 2;
   text-transform: uppercase;
   width: 150px;
   height: auto;
-  margin-left: 30px;
+  margin-left: 40px;
   margin-top: 10px;
 }
 
+/* search */
 .search {
   flex: 1;
   width: 600px;
@@ -23,24 +26,21 @@
   display: flex;
   align-items: center;
   margin-top: 15px;
-  margin-left: -110px;
+  margin-left: 0px;
 }
 
 .search input {
   border: 2px solid #C0EEE4; 
 }
 
-.search .submit{
-  background-image: url('../img/button_search.png'); 
+/* button search */
+.search .btn{ 
   margin-left: 10px;
-  background-size: cover; 
-  text-indent: -9999px;
-  border: none; 
-  padding: 0; 
-  width: 30px; 
-  height: 30px; 
+  width: 40px; 
+  height: 40px; 
 }
 
+/* navbar */
 .nav-item {
   display: flex;
   align-items: center;
@@ -59,6 +59,7 @@
   font-weight: bold; 
 }
 
+/* sidebar */
 .sidebar {
   font-family: 'Poppins', sans-serif;
   position: fixed;
@@ -71,15 +72,20 @@
   transition: all .5s ease;
 }
 
-.sidebar ul {
-  display: flex; /* Menggunakan flexbox untuk tata letak */
-  align-items: center; /* Aligment vertikal ke tengah */
-  margin-bottom: 10px; /* Menambahkan margin bawah sesuai kebutuhan */
+.sidebar ul a {
+  display: flex;
+  align-items: center;
 }
 
-/* CSS untuk ikon Font Awesome */
+.sidebar ul {
+  display: flex; 
+  align-items: center; 
+  margin-bottom: 10px; 
+}
+
+/* icon Font sidebar */
 .sidebar ul i {
-  margin-right: 10px; /* Menambahkan margin kanan antara ikon dan teks */
+  margin-right: 15px; 
 }
 .sidebar {
   width: 200px;
@@ -92,24 +98,45 @@
   }
 }
 
-/* CSS untuk mengatur ukuran card */
+/*ukuran card */
 .container{
-  margin-left: 300px;
+  margin-left: 250px;
 }
 
-.card-group {
+.card {
   width: 200px; 
   height: 300px; 
   margin-left: 10px;
 }
 
-/* Untuk card yang ada di layar berukuran lebih besar (desktop), Anda mungkin perlu mengatur ulang lebar dan tingginya dengan media query */
-
+/* Untuk card yang ada di layar berukuran lebih besar (desktop)*/
 @media (min-width: 768px) {
-  .card-group {
+  .card {
     width: 200px; 
     height: 300px; 
   }
+}
+
+.card-text::before {
+  content: "RP. ";
+}
+
+/* button card */
+.btn-custom {
+  background-color: #007bff; 
+  margin-top: 40px;
+  margin-left: -10px;
+  color: #fff; 
+  padding: 5px 10px; 
+  border: none; 
+  border-radius: 5px; 
+  text-decoration: none; 
+  display: inline-block; 
+}
+
+/* Hover effect */
+.btn-custom:hover {
+  background-color: #0056b3; 
 }
 
 

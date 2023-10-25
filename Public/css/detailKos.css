@@ -95,6 +95,12 @@
     justify-content: space-between;
 }
 
+.logo-footer img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
 
 .footer-col {
     flex: 1;

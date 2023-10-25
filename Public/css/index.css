@@ -167,6 +167,12 @@ header .logo {
     bottom: 0;
 }
 
+.logo-footer img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
 .footer .row {
     display: flex;
     flex-wrap: wrap;
