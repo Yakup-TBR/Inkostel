@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/simpan.css">
+    <title>Favorit Kost</title>
+</head>
+<body>
+    <!-- Header -->
+     <div class="header">
+      <div class="logo">
+        <img src="../img/logo_inkostel.jpeg">
+      </div>
+    
+      <form class="form-inline my-2 my-lg-0">
+        <div class="search">
+          <input class="form-control mr-sm-2" type="search" placeholder="Cari" aria-label="Cari">
+          <button type="button" class="btn btn-primary">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </form>
+    
+      <div class="nav-item">
+        <a class="nav-link" href="#" id="profileButton">
+          <img src="../img/profile.png" style="width:50px; border-radius:50%;"/>
+          <span class="xp-user-live"></span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container favorite-container">
+        <h2 class="text-center mt-4">Kost Tersimpan</h2>
+
+        <!-- Baris Pertama -->
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Kost 1 -->
+                <div class="card custom-card">
+                    <img src="../img/gambar kos.jpg" class="card-img-top" alt="Kost 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Kost 1</h5>
+                        <p class="card-text">Deskripsi kost 1. Kost ini memiliki fasilitas A, B, dan C.</p>
+                        <p class="card-text">Harga: Rp 1.000.000 per bulan</p>
+                        <a href="#" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#kost1Modal">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Kost 2 -->
+                <div class="card custom-card">
+                    <img src="../img/gambar kos.jpg" class="card-img-top" alt="Kost 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Kost 2</h5>
+                        <p class="card-text">Deskripsi kost 2. Kost ini terletak di dekat fasilitas umum.</p>
+                        <p class="card-text">Harga: Rp 800.000 per bulan</p>
+                        <a href="#" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#kost2Modal">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modals -->
+        <div class="modal fade" id="kost1Modal" tabindex="-1" aria-labelledby="kost1ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="kost1ModalLabel">Detail Kost 1</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Deskripsi kost 1. Kost ini memiliki fasilitas A, B, dan C.</p>
+                        <p>Harga: Rp 1.000.000 per bulan</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="kost2Modal" tabindex="-1" aria-labelledby="kost2ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="kost2ModalLabel">Detail Kost 2</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Deskripsi kost 2. Kost ini terletak di dekat fasilitas umum.</p>
+                        <p>Harga: Rp 800.000 per bulan</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Baris Kedua -->
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Kost 3 -->
+                <div class="card custom-card">
+                    <img src="../img/gambar kos.jpg" class="card-img-top" alt="Kost 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Kost 3</h5>
+                        <p class="card-text">Deskripsi kost 3. Kost ini dekat dengan transportasi umum.</p>
+                        <p class="card-text">Harga: Rp 1.200.000 per bulan</p>
+                        <a href="#" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#kost3Modal">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Kost 4 -->
+                <div class="card custom-card">
+                    <img src="../img/gambar kos.jpg" class="card-img-top" alt="Kost 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Kost 4</h5>
+                        <p class="card-text">Deskripsi kost 4. Kost ini memiliki fasilitas X dan Y.</p>
+                        <p class="card-text">Harga: Rp 900.000 per bulan</p>
+                        <a href="#" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#kost4Modal">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="kost3Modal" tabindex="-1" aria-labelledby="kost3ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="kost3ModalLabel">Detail Kost 3</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Deskripsi kost 3. Kost ini dekat dengan transportasi umum.</p>
+                        <p>Harga: Rp 1.200.000 per bulan</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="kost4Modal" tabindex="-1" aria-labelledby="kost4ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="kost4ModalLabel">Detail Kost 4</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Deskripsi kost 4. Kost ini memiliki fasilitas X dan Y.</p>
+                        <p>Harga: Rp 900.000 per bulan</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

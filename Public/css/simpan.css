@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+/* header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px; 
+  }
+  
+  /* logo navbar */
+  .logo img {
+    flex: 2;
+    text-transform: uppercase;
+    width: 150px;
+    height: auto;
+    margin-left: 40px;
+    margin-top: 10px;
+  }
+  
+  /* search */
+  .search {
+    flex: 1;
+    width: 600px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    margin-left: 0px;
+  }
+  
+  .search input {
+    border: 2px solid #C0EEE4; 
+  }
+  
+  /* button search */
+  .search .btn{ 
+    margin-left: 10px;
+    width: 40px; 
+    height: 40px; 
+  }
+  
+  /* navbar */
+  .nav-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .nav-item img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 30px; 
+    margin-top: 15px;
+  }
+  
+  
+  .nav-item .xp-user-live {
+    font-weight: bold; 
+  }
+  
+  
+  
+  @media (max-width: 768px) {
+      .sidebar {
+        width: 100px; /* Atur lebar yang sesuai untuk layar mobile */
+      }
+    }
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.favorite-container {
+    margin-top: 10px;
+}
+
+.custom-card {
+    background-color: #fff;
+    border: 1px solid #e1e5ea;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 400px;
+}
+
+.custom-card:hover {
+    transform: scale(1.03);
+}
+
+/* Tambahkan gaya untuk modal */
+.modal-content {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.modal-body {
+    font-size: 1rem;
+    padding: 15px;
+}
+
+.modal-footer {
+    padding: 15px;
+}
+
+
+.btn-custom {
+    background-color: #5b974b; /* Warna tombol Sage */
+    color: #fff; /* Warna teks tombol */
+    border: none;
+}
+
+.btn-custom:hover {
+    background-color: #468338; /* Warna tombol Sage saat hover */
+}
+
+
+
+
+/* Footer styles */
+footer {
+    font-size: 0.9rem;
+    padding-top: 100px; /* Atur tinggi bagian atas footer */
+    padding-bottom: 20px; /* Atur tinggi bagian bawah footer */
+    margin-top: 20px; /* Atur jarak antara footer dan konten di atasnya */
+}
+
+.logo {
+    max-width: 200px;
+}
