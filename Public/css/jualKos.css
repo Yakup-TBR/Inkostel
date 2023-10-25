@@ -59,11 +59,13 @@
   font-weight: bold; 
 }
 
-
+.form {
+  align-items: center;
+}
 
 @media (max-width: 768px) {
     .sidebar {
-      width: 100px; /* Atur lebar yang sesuai untuk layar mobile */
+      width: 100px; 
     }
   }
   
