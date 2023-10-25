@@ -98,6 +98,7 @@ header .logo {
 #kenapa .about-img img{
     width: 100%; 
     height: auto; 
+    padding-top: 60px;
     margin-right: 300px;
     margin-top: 5px;
 }
