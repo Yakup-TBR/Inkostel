@@ -73,7 +73,7 @@ body {
     border: 1px solid #e1e5ea;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 30px; /* Menambahkan jarak horizontal dan vertikal 10px */
+    margin: 30px; 
     width: 300px;
     height: 400px;
 }
