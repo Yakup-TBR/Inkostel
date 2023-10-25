@@ -59,12 +59,9 @@
   font-weight: bold; 
 }
 
-.form {
-  align-items: center;
-}
 
 @media (max-width: 768px) {
-    .sidebar {
+    .header {
       width: 100px; 
     }
   }

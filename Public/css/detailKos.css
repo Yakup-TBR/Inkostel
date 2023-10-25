@@ -1,0 +1,150 @@
+
+  /* Gaya untuk Kolom Gambar dan Karusel */
+.image-carousel {
+    display: flex;
+   align-items: center;
+    height: 500px; /* Sesuaikan dengan tinggi gambar */
+    margin-bottom: 20px;
+}
+    
+    /* Gaya untuk Gambar dalam Karusel */
+
+.image-carousel img {
+    width: 100%; /* Atur lebar gambar sesuai kebutuhan */
+    height: auto; /* Gambar akan disesuaikan dengan lebar yang diberikan */
+    object-fit: contain;
+    
+}
+ 
+/* Gaya untuk Logo Telepon */
+.kontak {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.kontak i {
+    margin: 5px;
+    font-size: 20px;
+}
+#imageCarousel {
+    max-width: 100%;
+ }
+
+/* Gaya untuk Kolom Informasi Kosan */
+/* .info-section {
+    padding: 20px;
+     background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+} */
+
+/* Gaya untuk Deskripsi dan Fasilitas */
+ .info-section h2 {
+    color: #333;
+ }
+
+/* Gaya untuk Tautan Harga */
+.info-section h2:last-of-type {
+     margin-top: 20px;
+}
+
+ /* Gaya untuk Daftar Fasilitas */
+.info-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+ }
+ .custom-scrollbar {
+    max-height: 500px; /* Sesuaikan dengan tinggi maksimal yang Anda inginkan */
+    overflow-y: auto;
+}
+
+/* Menyembunyikan scrollbar pada elemen saat tidak dihover */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+}
+
+/* Menampilkan scrollbar saat elemen dihover */
+.custom-scrollbar:hover::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.custom-scrollbar:hover::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+}
+
+
+
+/* footer */
+ .footer{
+	background-color: #E7FAF6;
+    color: #000000;
+    padding: 20px 0;
+    position: static; /*bisa absolute / static*/
+    bottom: 0;
+}
+
+.footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.footer-col {
+    flex: 1;
+    margin: 0 40px;
+}
+
+.logo-footer img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-col h4{
+	font-size: 18px;
+	color: #000000;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+
+
+#footer h4::before{ /*garisnya*/
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #000000;
+	height: 1px;
+	box-sizing: border-box;
+	width: 220%;
+}
+
+
+.social-links a {
+    font-size: 10px;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(255, 255, 255);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #000000;
+    transition: all 0.5s ease;
+}
+
+.social-links a:hover {
+    color: #24262b;
+    background-color: #85DAC8;
+}
+
+/*Footer End*/
+ 
