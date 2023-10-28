@@ -51,10 +51,20 @@
   margin-top: 15px;
 }
 
+.container-lg {
+  width: 1000px;
+  height: 1189px;
+  background-color: white;
+  border-radius: 10px;
+  border-style: double;
+  border-color: #C0EEE4;
+}
 
 .nav-item .xp-user-live {
   font-weight: bold; 
 }
+
+
 
 
 @media (max-width: 768px) {
