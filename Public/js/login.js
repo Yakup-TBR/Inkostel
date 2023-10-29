@@ -1,16 +1,19 @@
-function showSignUpForm() {
-    // Mengaktifkan transformasi header
-    const header = document.querySelector(".header");
-    const headerText = document.querySelector(".header p");
-    header.style.transform = "translateX(-100%)";
-    headerText.style.transform = "translateX(-100%)";
+const sign_in_btn = document.querySelector("#sign-in-btn");
+const sign_up_btn = document.querySelector("#sign-up-btn");
+const container = document.querySelector(".container");
 
-    // Menampilkan form sign up dengan efek slide
-    const formContainer = document.querySelector(".form-container");
-    formContainer.classList.toggle("signup-active");
+sign_up_btn.addEventListener("click", () => {
+  container.classList.add("sign-up-mode");
+});
 
-    // Menunda pengalihan ke halaman "signup.html" selama 600ms (sesuaikan dengan durasi efek slide Anda)
-    setTimeout(function () {
-        window.location.href = "signup.html";
-    }, 600);
-}
+sign_in_btn.addEventListener("click", () => {
+  container.classList.remove("sign-up-mode");
+});
+
+document.getElementById("loginButton").addEventListener("click", function(event) {
+  // Menghentikan perilaku bawaan form (mengirim data) agar tidak mengarahkan ke halaman lain
+  event.preventDefault();
+
+  // Mengarahkan pengguna ke halaman lain, ganti URL "halaman_tujuan.html" dengan URL yang sesuai
+  window.location.href = "index.html";
+});

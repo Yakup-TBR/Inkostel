@@ -122,11 +122,9 @@ label.btn {
 .btn {
     cursor: pointer;
 }
-
-.text-light {
-    color: #babbbc !important;
+.text-color{
+    color: #000000;
 }
-
 .card {
     background-clip: padding-box;
     box-shadow     : 0 1px 4px rgba(24, 28, 33, 0.012);
@@ -139,9 +137,6 @@ label.btn {
 .date-select {
     display: inline-block; /* Display the date-select divs inline */
     margin-right: 10px; /* Add some spacing between them */
-}
-.text-end{
-    padding-top: 20px;
 }
 
 /*Main End*/
@@ -170,12 +165,20 @@ label.btn {
 .footer-col {
     flex: 1;
     margin: 0 40px;
+    
+}
+
+.footer-col a {
+    text-decoration: none; /* Menghapus garis bawah */
+    color: #333; /* Mengganti warna teks */
+    font-weight: normal; /* Mengganti ketebalan font (misalnya, menjadi normal) */
 }
 
 .logo-footer img {
     max-width: 100%;
     height: auto;
 }
+
 
 .footer-col h4{
 	font-size: 18px;
@@ -185,17 +188,19 @@ label.btn {
 	position: relative;
 }
 
-
-#footer h4::before{ /*garisnya*/
-	content: '';
-	position: absolute;
-	left:0;
-	bottom: -10px;
-	background-color: #000000;
-	height: 1px;
-	box-sizing: border-box;
-	width: 220%;
+.mb-2 {
+    margin-bottom: 0.5rem;
 }
+
+.footer ul{
+    color: black;
+}
+
+
+hr {
+    border: 1px solid #000; /* Ganti warna, lebar, dan gaya garis sesuai kebutuhan */
+}
+
 
 
 .social-links a {
