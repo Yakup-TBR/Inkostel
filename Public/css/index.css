@@ -19,6 +19,7 @@ header .container {
     width: 100%;
     margin: 0 auto;
     background-color: #E7FAF6;
+    padding-top : 10px;
 }
 
 img {
@@ -153,6 +154,14 @@ header .logo {
 .yukcari-text h1 {
     font-weight: bold;
     color: #85DAC8;
+}
+
+.custom-button3 {
+    width: 200px; 
+    height: 40px; 
+    background-color: #85DAC8;
+    border : transparent;
+    color : white;
 }
 
 
