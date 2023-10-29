@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <link rel="stylesheet" href="../css/carikost.css">
   </head>
   <body>
@@ -33,7 +34,7 @@
         </button>
         <a class="nav-link" href="#" id="profileButton">
           <img src="../img/profile.png" style="width:50px; border-radius:50%;"/>
-          <span class="xp-user-live"></span>
+          
         </a>
       </div>
     </div>
@@ -48,29 +49,29 @@
     </div>
 
     <!-- sidebar -->
-    <div class="sidebar">
-        </br>
-        <ul><a href="../html/index.html"><i class="bi bi-house-door-fill"></i>Home</a></ul>
-        <ul><a href="#"><i class="bi bi-search"></i>Cari</a></ul>
-        <ul><a href="#"><i class="bi bi-heart-fill"></i>Favorit</a></ul>
-        <ul><a href="#"><i class="bi bi-file-earmark-arrow-down-fill"></i>Tersimpan</a></ul>
-        <ul><a href="#"><i class="bi bi-house-dash-fill"></i>Jual</a></ul>
-        </br>
-        </br>
-        </br>
-        </br>
-        <ul><a href="#"><img src="../img/profile.png" style="width:25px; border-radius:50%; margin-right: 10px; float: left;"/>profile</a></ul>
-    </div>
+    <div class="container" id="consid">
+      <div class="sidebar">
+      </br>
+      <ul><a href="../html/index.html"><i class="bi bi-house-door-fill"></i>Home</a></ul>
+      <ul><a href="#"><i class="bi bi-search"></i>Cari</a></ul>
+      <ul><a href="#"><i class="bi bi-heart-fill"></i>Favorit</a></ul>
+      <ul><a href="#"><i class="bi bi-file-earmark-arrow-down-fill"></i>Tersimpan</a></ul>
+      <ul><a href="#"><i class="bi bi-house-dash-fill"></i>Jual</a></ul>
+      </br>
+      </br>
+      </br>
+      </br>
+      <ul><a href="#"><img src="../img/profile.png" style="width:25px; border-radius:50%; margin-right: 10px; float: left;"/>profile</a></ul>
+  </div>
+    </div> 
+   
     <!-- end sidebar -->
 
     <!-- main -->
-    <div class="container my-5">
+    <div class="container my-5"id="conmain">
       <div class="row row-cols-1 row-cols-md-3 g-0">
         <!-- card 1 -->
         <div class="col-md-3 mb-4">
-      <div class="row row-cols-1 row-cols-md-3 g-3">
-
-        <div class="col-md-3">
           <div class="card">
             <div class="border-image">
               <div id="carouselExample1" class="carousel slide">
@@ -102,11 +103,10 @@
                 <i class="bi bi-chevron-compact-right"></i>
               </button>
             </div>
-          </div>  
+          </div>
         </div>
         <!-- card 2 -->
         <div class="col-md-3 mb-4">
-        <div class="col-md-3">
           <div class="card">
             <div class="border-image">
               <div id="carouselExample2" class="carousel slide">
@@ -139,8 +139,7 @@
         </div>
         <!-- card 3 -->
         <div class="col-md-3 mb-4">
-        <div class="col-md-3">
-]          <div class="card">
+          <div class="card">
             <div class="border-image">
               <div id="carouselExample3" class="carousel slide">
                 <div class="carousel-inner">
@@ -172,8 +171,6 @@
         </div>
         <!-- card 4 -->
         <div class="col-md-3 mb-4">
-
-        <div class="col-md-3">
           <div class="card">
             <div class="border-image">
               <div id="carouselExample4" class="carousel slide">
@@ -206,8 +203,6 @@
         </div>
         <!-- card 5 -->
         <div class="col-md-3 mb-4">
-
-        <div class="col-md-3">
           <div class="card">
             <div class="border-image">
               <div id="carouselExample5" class="carousel slide">
@@ -240,8 +235,6 @@
         </div>
         <!-- card 6 -->
         <div class="col-md-3 mb-4">
-
-        <div class="col-md-3">
           <div class="card">
             <div class="border-image">
               <div id="carouselExample6" class="carousel slide">
@@ -274,8 +267,6 @@
         </div>
         <!-- card 7 -->
         <div class="col-md-3 mb-4">
-
-        <div class="col-md-3">
           <div class="card">
             <div class="border-image">
               <div id="carouselExample7" class="carousel slide">
@@ -308,8 +299,6 @@
         </div>
         <!-- card 8 -->
         <div class="col-md-3 mb-4">
-
-        <div class="col-md-3">
           <div class="card">
             <div class="border-image">
               <div id="carouselExample8" class="carousel slide">
@@ -340,9 +329,11 @@
             </div>
           </div>
         </div>
-
+      </div>
+    </div>
+  </body>
     <!-- end main -->
-
+    
     <!--Footer-->
     <footer class="footer">
       <div class="container" id="footer">
@@ -396,10 +387,10 @@
           </div>
           <hr>
           <p>Copyright @ 2023 Kelompok 5 - Web Programming, InKosTel</p>
-        
       </div>
   </footer>
   <!--Akhir Footer--> 
+
 
   <!-- script js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -415,5 +406,5 @@
             }
         });
   </script>
-  </body>
+  
 </html>
