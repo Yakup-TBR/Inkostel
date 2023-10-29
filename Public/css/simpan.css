@@ -134,20 +134,7 @@
     color: #fff; /* Ganti warna ikon saat di-hover */
   }
   
-  /* Mengubah warna ikon dan warna border ketika elemen memiliki teks "Jual" */
-  .sidebar ul a:contains("Jual") {
-    color: red; 
-  }
-  
-  /* Merubah warna ikon */
-  .sidebar ul a:contains("Jual") i {
-    color: red; 
-  }
-  
-  /* Merubah warna border */
-  .sidebar ul a:contains("Jual") {
-    border-color: red; 
-  }
+
   
   /* Tambahkan border di sebelah kanan sidebar */
   .sidebar::after {
@@ -168,9 +155,6 @@
 
     
   /*container card */
-  .custom-h4 {
-    color: red; /* Ganti "red" dengan warna yang Anda inginkan */
-}
 
   #conmain{
     margin-left: 300px;

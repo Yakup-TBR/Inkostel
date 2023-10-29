@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>InKosTel</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</header>
+<body>
+    <!-- SideBar Menu -->
+    <nav>
+        <div class="logo">
+            <i class='bx bx-menu menu-icon'></i>
+
+            <div class="container">
+                <div class="row">
+    
+                    <div class="col-md-4 logo">
+                        <!--Coba sidebar-->
+        
+                        <!--Sidebar end-->
+                        
+                        <img src="../img/logo_inkostel.png" alt="Logo KosTel">
+                    </div>
+            
+                    <div class="col-md-4 text-center">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Cari" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Cari</button>
+                        </form>
+                    </div>
+            
+                        <div class="col-md-4 text-end" id="button-container">
+                            <button type="button" class="btn btn-success custom-button1" id="loginButton">Login</button>
+    
+                </div>
+            </div>
+        
+        </div>
+
+        <div class="sidebar">
+            <div class="logo">
+                <i class='bx bx-menu menu-icon'></i>
+                <span class="logo-name">InKostel</span>
+            </div>
+
+            <div class="sidebar-content">
+                <ul class="lists">
+                    <li class="list">
+                        <a href="#" class="nav-link">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="link">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="list">
+                        <a href="#" class="nav-link">
+                            <i class='bx bx-search icon'></i>
+                            <span class="link">Cari Kos</span>
+                        </a>
+                    </li>
+
+                    <li class="list">
+                        <a href="#" class="nav-link">
+                            <i class='bx bx-archive-in icon'></i>
+                            <span class="link">Kos Tersimpan</span>
+                        </a>
+                    </li>
+
+                    <li class="list">
+                        <a href="#" class="nav-link">
+                            <i class='bx bx-message-square-add icon'></i>
+                            <span class="link">Jual Kos</span>
+                        </a>
+                    </li>
+
+                    <li class="list">
+                        <a href="#" class="nav-link">
+                            <i class='bx bx-user-circle icon'></i>
+                            <span class="link">Profile</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="bottom-content">
+                    <li class="list">
+                        <a href="#" class="nav-link">
+                            <i class='bx bx-log-out icon'></i>
+                            <span class="link">Log Out</span>
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Overlay -->
+    <section class="overlay">
+
+    </section>
+
+    <script>
+        const navBar = document.querySelector("nav"),
+              menuBtn = document.querySelectorAll(".menu-icon"),
+              overlay = document.querySelector(".overlay");
+        console.log(navBar, menuBtn, overlay);
+
+        menuBtn.forEach(menuBtn => {
+            menuBtn.addEventListener("click", () => {
+                navBar.classList.toggle("open");
+            });
+        });
+
+        overlay.addEventListener("click", () => {
+            navBar.classList.remove("open");
+        });
+    </script>
+</body>
+</html>
