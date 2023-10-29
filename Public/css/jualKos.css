@@ -176,6 +176,25 @@
   border-color: red; 
 }
 
+.sidebarJual ul a {
+  color: #E29578;
+  border-color: #E29578;
+}
+
+.sidebarJual ul a i {
+  color: #E29578;
+}
+
+.sidebarJual ul a img {
+  border: 1px solid #E29578;
+  margin-left: 10px;
+}
+
+.sidebarJual ul a:hover {
+  background-color: #E29578;
+  color: #fff;
+}
+
 /* Tambahkan border di sebelah kanan sidebar */
 .sidebar::after {
   content: "";
