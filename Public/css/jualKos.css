@@ -86,6 +86,7 @@
   margin-top: 15px;
 }
 
+/* content */
 .container-lg {
   width: 1000px;
   height: 1189px;
@@ -95,6 +96,8 @@
   left: 100px;
   top: -500px;
 }
+/* end content */
+
 
 .nav-item .xp-user-live {
   font-weight: bold; 
