@@ -20,6 +20,7 @@
 
 /* search */
 .search {
+  border-radius: 10px;
   flex: 1;
   width: 600px;
   height: auto;
@@ -35,10 +36,23 @@
 
 /* button search */
 .search .btn{ 
-  margin-left: 10px;
+  border-radius: 10px;
+  color: white;
+  background-color: #41EBC6;
+  margin-left: 0px;
   width: 40px; 
   height: 40px; 
 }
+
+/* button nama user*/
+.nav-item button {
+  color: #fff;
+  background-color: #41EBC6;
+  padding: 5px;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
 
 /* navbar */
 .nav-item {
@@ -47,7 +61,7 @@
 }
 
 
-.nav-item img {
+.nav-link img {
   width: 50px;
   border-radius: 50%;
   margin-right: 30px; 
@@ -55,90 +69,252 @@
 }
 
 
-.nav-item .xp-user-live {
+.nav-link .xp-user-live {
   font-weight: bold; 
+}
+
+/* button dibawah search */
+.filter-button {
+  text-align: center; /* Mengatur teks tombol di tengah */
+  margin-top: 10px; /* Jarak atas antara filter-button dan daftar card (sesuaikan sesuai kebutuhan) */
+}
+
+.filter-button button {
+  color: white;
+  background-color: #41EBC6;
+  margin: 0 5px; /* Memberikan jarak antara tombol */
+  width: 200px;
 }
 
 /* sidebar */
 .sidebar {
   font-family: 'Poppins', sans-serif;
-  position: fixed;
   left: 0px;
-  width: 80px;
-  height: 65%;
-  border: 1px solid #ccc; 
+  width: 210px;
+  border: 3px solid #41EBC6;
   margin-left: 20px;
   border-radius: 10px;
+  margin-top: 60px;
   transition: all .5s ease;
 }
 
+.sidebar ul {
+  height: 50px; /* Sesuaikan tinggi sesuai kebutuhan */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .sidebar ul a {
-  display: flex;
+  color: #41EBC6;
+  border: 1px solid #41EBC6;
+  border-radius: 5px;
+  width: 170px;
+  display: flex; /* Menggunakan display flex untuk mengatur tinggi elemen */
+  align-items: center; /* Mengatur elemen ke tengah secara vertikal */
+  margin-left: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.sidebar ul a i {
+  color: #41EBC6;
+  width: 30px;
+  margin-left: 10px;
   align-items: center;
 }
 
-.sidebar ul {
-  display: flex; 
-  align-items: center; 
-  margin-bottom: 10px; 
+/* profile */
+.sidebar ul a img {
+  border: 1px solid #41EBC6;
+  margin-left: 10px; /* Mengatur margin kiri yang sesuai */
 }
 
-/* icon Font sidebar */
-.sidebar ul i {
-  margin-right: 15px; 
-}
-.sidebar {
-  width: 200px;
+/* Hover pada tautan di sidebar */
+.sidebar ul a:hover {
+  background-color: #41EBC6; /* Ganti warna latar belakang saat di-hover */
+  color: #fff; /* Ganti warna teks saat di-hover */
 }
 
-/* CSS untuk layar lebih sempit (misalnya perangkat mobile) */
-@media (max-width: 768px) {
-  .sidebar {
-    width: 100px; /* Atur lebar yang sesuai untuk layar mobile */
-  }
+/* Mengubah warna ikon saat di-hover */
+.sidebar ul a:hover i {
+  color: #fff; /* Ganti warna ikon saat di-hover */
+}
+
+/* Mengubah warna ikon dan warna border ketika elemen memiliki teks "Jual" */
+.sidebar ul a:contains("Jual") {
+  color: red; 
+}
+
+/* Merubah warna ikon */
+.sidebar ul a:contains("Jual") i {
+  color: red; 
+}
+
+/* Merubah warna border */
+.sidebar ul a:contains("Jual") {
+  border-color: red; 
+}
+
+/* Tambahkan border di sebelah kanan sidebar */
+.sidebar::after {
+  content: "";
+  display: block;
+  width: 3px; /* Lebar garis pemisah */
+  background-color: #00000070; /* Warna garis pemisah */
+  height: 95%;
+  position: absolute;
+  margin-left: 225px;
+  top: 195px;
+}
+
+/*container card */
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 290px;
+  padding: 15px;
+  margin-bottom: 100px;
 }
 
 /*ukuran card */
-.container{
-  margin-left: 250px;
-}
-
 .card {
-  width: 200px; 
-  height: 300px; 
-  margin-left: 10px;
+  border-radius: 10px;
+  border: 3px solid #41EBC6;
+  width: 250px;
+  height: 270px; /* Tinggikan card agar memiliki jarak yang cukup */
+  margin-right: 0; 
+  margin-left: -30px;
+  margin-bottom: 480px; /* Mengatur margin bawah untuk memberi jarak vertikal antara card */
+  margin-top: -480px;
 }
 
-/* Untuk card yang ada di layar berukuran lebih besar (desktop)*/
-@media (min-width: 768px) {
-  .card {
-    width: 200px; 
-    height: 300px; 
-  }
+.col-md-3 {
+  margin: -5px;
 }
 
-.card-text::before {
-  content: "RP. ";
+/* Aturan CSS untuk border dan gambar di dalamnya */
+.border-image {
+  border: 3px solid #ccc; /* Ganti warna dan ketebalan sesuai kebutuhan */
+  padding: 0; /* Jarak antara border gambar dan border container */
+  border-radius: 10px;
+  margin: 5px;
 }
 
-/* button card */
-.btn-custom {
-  background-color: #007bff; 
-  margin-top: 40px;
-  margin-left: -10px;
-  color: #fff; 
-  padding: 5px 10px; 
-  border: none; 
-  border-radius: 5px; 
-  text-decoration: none; 
-  display: inline-block; 
+.border-image img{
+  width: 150px;
+  height: 180px;
 }
 
-/* Hover effect */
-.btn-custom:hover {
-  background-color: #0056b3; 
+.card-title{
+  margin-top: -10px;
+}
+
+.card-text{
+  margin-top: 0px;
+  font-weight:bold;
+  font-size: larger;
+  color: #41EBC6;
+}
+
+.card-text::after {
+  content: "jt/thn ";
+  color: #41EBC6;
+}
+
+/* untuk card text dan button */
+.card .card-text,
+.card i {
+  color: #41EBC6;
+}
+
+.card .btn i {
+  color: #41EBC6;
+  font-size: 30px; /* Atur ukuran ikon sesuai kebutuhan */
+}
+
+/* end card */
+
+/*footer start*/
+.footer{
+	background-color: #E7FAF6;
+    color: #000000;
+    padding: 20px 0;
+    position: static; /*bisa absolute / static*/
+    bottom: 0;
+}
+
+.logo-footer img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.footer-col {
+    flex: 1;
+    margin: 0 40px;
+    
+}
+
+.footer-col a {
+    text-decoration: none; /* Menghapus garis bawah */
+    color: #333; /* Mengganti warna teks */
+    font-weight: normal; /* Mengganti ketebalan font (misalnya, menjadi normal) */
+}
+
+.logo-footer img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.footer-col h4{
+	font-size: 18px;
+	color: #000000;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.footer ul{
+    color: black;
+}
+
+
+hr {
+    border: 1px solid #000; /* Ganti warna, lebar, dan gaya garis sesuai kebutuhan */
 }
 
 
 
+.social-links a {
+    font-size: 10px;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(255, 255, 255);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #000000;
+    transition: all 0.5s ease;
+}
 
+.social-links a:hover {
+    color: #24262b;
+    background-color: #85DAC8;
+}
+
+/*Footer End*/
