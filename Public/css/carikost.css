@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
+
 /* header */
 .header {
   display: flex;
@@ -69,9 +70,6 @@
 }
 
 
-.nav-link .xp-user-live {
-  font-weight: bold; 
-}
 
 /* button dibawah search */
 .filter-button {
@@ -168,13 +166,16 @@
   top: 195px;
 }
 
+#consid{
+  margin-left: -5px;
+}
+/*sidebar end*/
+
 /*container card */
-.container{
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 290px;
-  padding: 15px;
-  margin-bottom: 100px;
+#conmain{
+  margin-left: 300px;
+  padding: 15px;  
+  padding-left: -200px;
 }
 
 /*ukuran card */
@@ -232,8 +233,8 @@
   color: #41EBC6;
   font-size: 30px; /* Atur ukuran ikon sesuai kebutuhan */
 }
-
 /* end card */
+
 
 /*footer start*/
 .footer{
@@ -291,12 +292,9 @@
     color: black;
 }
 
-
 hr {
     border: 1px solid #000; /* Ganti warna, lebar, dan gaya garis sesuai kebutuhan */
 }
-
-
 
 .social-links a {
     font-size: 10px;
