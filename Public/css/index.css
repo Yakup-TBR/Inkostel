@@ -16,6 +16,34 @@ header {
     background-color: #E7FAF6;
 }
 
+/* search */
+.search {
+    border-radius: 10px;
+    flex: 1;
+    width: 600px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin-top: 1px;
+    margin-left: -60px;
+  }
+  
+  .search input {
+    border: 2px solid #C0EEE4; 
+  }
+  
+  /* button search */
+  .search .btn{ 
+    border-radius: 10px;
+    color: white;
+    background-color: #41EBC6;
+    margin-left: 0px;
+    width: 40px; 
+    height: 40px; 
+  }
+/*Search End*/
+
+
 #logoHeader{
     background-color: #E7FAF6;
     color :#E7FAF6;
