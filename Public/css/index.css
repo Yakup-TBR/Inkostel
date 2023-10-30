@@ -16,6 +16,22 @@ header {
     background-color: #E7FAF6;
 }
 
+#logoHeader{
+    background-color: #E7FAF6;
+    color :#E7FAF6;
+}
+
+#conheader{
+    background-color: #E7FAF6;
+    color :#E7FAF6;
+}
+
+
+body header{
+    background-color: #E7FAF6;
+}
+
+
 header .container {
     width: 100%;
     margin: 0 auto;
@@ -39,7 +55,7 @@ nav {
     left: 0;
     height: 70px;
     width: 100%;
-    background: #FFF;
+    background: #E7FAF6;
     display: flex;
     align-items: center;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
@@ -292,6 +308,10 @@ header .logo {
     color : white;
 }
 
+#cariButton3:hover {
+    background-color: #fff; /* Warna latar belakang saat dihover (misalnya oranye) */
+    color: #FFFFFF; /* Warna teks saat dihover (misalnya putih) */
+}
 
 
 
