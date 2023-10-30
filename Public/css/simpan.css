@@ -142,7 +142,7 @@
     display: block;
     width: 3px; /* Lebar garis pemisah */
     background-color: #00000070; /* Warna garis pemisah */
-    height: 95%;
+    height: 80%;
     position: absolute;
     margin-left: 225px;
     top: 195px;
@@ -172,6 +172,8 @@
     margin-left: -30px;
     margin-bottom: 480px; /* Mengatur margin bawah untuk memberi jarak vertikal antara card */
     margin-top: -480px;
+    
+
   }
   
   .col-md-3 {
