@@ -3,7 +3,12 @@
   color: black; /* Ganti dengan warna yang Anda inginkan untuk teks */
   display: inline; /* Memastikan teks tetap berada di sebelah ikon */
 }
-
+.info-section2{
+  margin-top: 20px;
+}
+.info-section3{
+  margin-top: 20px;
+}
 .bordered-icon {
   border: 1px solid #6DD6BF;
   width: 185px;
