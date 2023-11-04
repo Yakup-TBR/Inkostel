@@ -111,11 +111,7 @@
 }
 
 @media (max-width: 768px) {
-    .header {
-      width: 1000px;
-      min-height: 200px; 
-    }
-    .container-lg {
+    body {
       width: 1000px;
       min-height: 200px; 
     }
