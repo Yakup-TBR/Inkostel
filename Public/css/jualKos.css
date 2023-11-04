@@ -95,6 +95,14 @@
   top: -500px;
 }
 
+#noHP i {
+  font-style: unset;
+}
+
+#Rp i {
+  font-style: unset;
+}
+
 /* end content */
 
 
