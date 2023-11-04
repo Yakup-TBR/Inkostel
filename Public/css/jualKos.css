@@ -89,11 +89,12 @@
 /* content */
 .container-lg {
   width: 1000px;
-  height: 1189px;
+  height: 650px;
   position: relative;
   left: 100px;
   top: -500px;
 }
+
 /* end content */
 
 
@@ -103,7 +104,12 @@
 
 @media (max-width: 768px) {
     .header {
-      width: 100px; 
+      width: 1000px;
+      min-height: 200px; 
+    }
+    .container-lg {
+      width: 1000px;
+      min-height: 200px; 
     }
 }
 
