@@ -232,9 +232,13 @@ header .logo {
   display: flex;
   flex-direction: column;
 }
+
 h1{
     padding-left: 17%;
+    padding-top: 7px;
 }
+
+
 .text-color{
   color: black; /* Ganti dengan warna yang Anda inginkan untuk teks */
   display: inline; /* Memastikan teks tetap berada di sebelah ikon */
@@ -242,6 +246,10 @@ h1{
  .custom-scrollbar {
     max-height: 500px; /* Sesuaikan dengan tinggi maksimal yang Anda inginkan */
     overflow-y: auto;
+}
+
+#detail{
+    padding-top:20px
 }
 
 /* Menyembunyikan scrollbar pada elemen saat tidak dihover */
@@ -277,6 +285,18 @@ h1{
   padding: 5px; /* Jika Anda ingin menambahkan ruang di sekitar ikon */
   display: block;
 }
+
+/*
+#fasilitas{
+    padding-bottom: -50px;
+}
+*/
+
+#harga{
+    margin-top: -200px;
+}
+
+
 .dropdown {
   margin: 5px; /* Atur margin untuk elemen dropdown */
   
