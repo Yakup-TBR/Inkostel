@@ -15,8 +15,15 @@ header {
     background-color: #E7FAF6;
 }
 
-.text-end{
-    visibility: hidden;
+#button-container a.nav-link:hover {
+    background-color: transparent; 
+  }
+  
+
+#button-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px; 
 }
 
 /* search */
