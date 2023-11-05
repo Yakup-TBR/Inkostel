@@ -228,6 +228,7 @@ header .logo {
 }
 
 /*Header End*/
+/* body mulai */
 #conbody{
   display: flex;
   flex-direction: column;
@@ -295,8 +296,6 @@ h1{
 #harga{
     margin-top: -200px;
 }
-
-
 .dropdown {
   margin: 5px; /* Atur margin untuk elemen dropdown */
   
@@ -312,6 +311,7 @@ h1{
 .dropdown :hover{
   background-color: #6DD6BF !important;
 }
+/* body selesai */
 
 
 /* footer start/ */
