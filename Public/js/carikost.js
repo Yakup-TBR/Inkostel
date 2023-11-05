@@ -1,14 +1,17 @@
+const navBar = document.querySelector("nav"),
+menuBtn = document.querySelectorAll(".menu-icon"),
+overlay = document.querySelector(".overlay");
+console.log(navBar, menuBtn, overlay);
 
-// JavaScript untuk mengubah warna saat teks adalah "Jual"
-const elements = document.querySelectorAll(".sidebar ul a");
-elements.forEach(element => {
-    if (element.innerText.includes("Jual")) {
-        element.style.color = "#E29578"; // Merubah warna teks menjadi merah
-        element.style.borderColor = "#E29578"; // Merubah warna border menjadi merah
-        element.querySelector("i").style.color = "#E29578"; // Merubah warna ikon menjadi merah
-    }
+menuBtn.forEach(menuBtn => {
+menuBtn.addEventListener("click", () => {
+  navBar.classList.toggle("open");
+});
 });
 
+overlay.addEventListener("click", () => {
+navBar.classList.remove("open");
+});
   // Data card
   const cardData = [
     {
@@ -90,26 +93,26 @@ elements.forEach(element => {
     });
   }
 
-  // Ambil semua tombol filter
+// Ambil semua tombol filter
 const filterButtons = document.querySelectorAll('.filter-button .btn');
 
 // Tambahkan event listener pada setiap tombol filter
 filterButtons.forEach(button => {
   button.addEventListener('click', () => {
-    const filterType = button.getAttribute('data-filter'); // Dapatkan jenis filter dari atribut data-filter
+    const filterType = button.getAttribute('data-filter'); 
 
     // Lakukan pemfilteran berdasarkan jenis filter
     const filteredData = cardData.filter(item => {
       if (filterType === 'semua') {
-        return true; // Tampilkan semua data jika filter adalah "Semua"
+        return true; 
       } else if (filterType === 'putra') {
-        return item.title.includes('Putra'); // Filter berdasarkan "Putra"
+        return item.title.includes('Putra'); 
       } else if (filterType === 'putri') {
-        return item.title.includes('Putri'); // Filter berdasarkan "Putri"
+        return item.title.includes('Putri'); 
       } else if (filterType === 'termurah') {
-        return parseInt(item.cardText1) <= 10; // Filter item dengan cardText1 kurang dari atau sama dengan 10
+        return parseInt(item.cardText1) <= 10; 
       }else if (filterType === 'terdekat') {
-        return parseInt(item.cardText2) < 1000; // Filter item dengan cardText2 kurang dari atau sama dengan 1000
+        return parseInt(item.cardText2) < 1000; 
       }
     });
     // Tampilkan data yang telah difilter
@@ -146,12 +149,14 @@ filterButtons.forEach(button => {
     carouselInner.appendChild(carouselItem);
     carousel.appendChild(carouselInner);
 
+    // agar ketika click gambar langsung berpindah
     img.addEventListener("click", () => {
-        window.location.href = 'detailKos.html' ; // Arahkan ke URL gambar
+        window.location.href = 'detailKos.html' ; 
     });
 
     card.appendChild(carousel);
 
+    // untuk membuat element 
     const cardBody = document.createElement("div");
     cardBody.classList.add("card-body");
 
@@ -167,12 +172,14 @@ filterButtons.forEach(button => {
     cardText2.classList.add("card-text2");
     const cardText2Value = parseInt(data.cardText2);
   
+    // untuk mengetahui terdekat
     if (cardText2Value >= 1000) {
       cardText2.textContent = (cardText2Value / 1000) + " KM";
     } else {
       cardText2.textContent = cardText2Value + " Meter";
     }
 
+    // untuk icon bookmark 
     const bookmarkIcon = document.createElement("i");
     bookmarkIcon.classList.add("bi", "bi-bookmark");
     bookmarkIcon.style.position = "relative";
@@ -182,7 +189,7 @@ filterButtons.forEach(button => {
     bookmarkIcon.style.top = "-100px";
     
     
-    // Menambahkan event listener untuk mengubah ikon bookmark saat diclick
+    // agar berganti ketika icon bookmark diclick
     bookmarkIcon.addEventListener("click", () => {
         if (bookmarkIcon.classList.contains("bi-bookmark")) {
             bookmarkIcon.classList.remove("bi-bookmark");
@@ -193,18 +200,21 @@ filterButtons.forEach(button => {
         }
     });
     
-
+    // untuk menambahkan ke dalam cardBody
     cardBody.appendChild(cardTitle);
     cardBody.appendChild(cardText1);
     cardBody.appendChild(cardText2);
     cardBody.appendChild(bookmarkIcon);
+
+    // untuk menggabungkan semua ke card
     card.appendChild(cardBody);
 
+    // untuk mengelompokan card ke kolom
     cardCol.appendChild(card);
     cardContainer.appendChild(cardCol);
   }
 
-  // Panggil createCard untuk setiap data card
+  // untuk menjalankan fungsi
   cardData.forEach(createCard);
 
 
