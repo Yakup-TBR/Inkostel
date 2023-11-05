@@ -269,28 +269,48 @@ h1{
 .custom-scrollbar:hover::-webkit-scrollbar-thumb {
     background-color: #ffffff;
 }
-.info-section2{
-  margin-top: 20px;
+.fasilitas {
+    display: flex;
+    flex-wrap: wrap;
 }
-.info-section3{
-  margin-top: 20px;
+
+.info-section {
+    display: flex;
+    align-items: center;
+}
+
+.info-section i {
+    margin-right: 10px;
+}
+
+.info-section2 {
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.info-section3 {
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
 }
 .bordered-icon {
   border: 1px solid #6DD6BF;
-  width: 185px;
-  height: 39px;
-  top: 643px;
-  left: 819px;
-  border-radius: 11px; /* Untuk membuat ikon dengan border bulat */
-  padding: 5px; /* Jika Anda ingin menambahkan ruang di sekitar ikon */
+  width: 100%; /* Lebar akan menyesuaikan lebar parent element */
+  border-radius: 11px;
+  padding: 5%;
   display: block;
+  box-sizing: border-box; /* Untuk mempertahankan padding dalam perhitungan lebar dan tinggi */
 }
 
-/*
-#fasilitas{
-    padding-bottom: -50px;
+/* Untuk mengatur posisi absolut jika diperlukan */
+.top {
+  top: 5%; /* Atur sesuai kebutuhan */
 }
-*/
+
+.left {
+  left: 5%; /* Atur sesuai kebutuhan */
+}
 
 #harga{
     margin-top: -200px;
@@ -397,26 +417,56 @@ hr {
 }
 
 
-@media screen and (max-width: 768px) {
-    /* Adjust any specific styles for tablets and mobile devices here */
-    header {
-        height: 60px; /* Reduce header height for smaller screens */
-    }
-    .search {
-        width: 100%; /* Full width search input for tablets and mobile */
-    }
-    .search .btn {
-        width: 30px; /* Reduce button width for smaller screens */
-        height: 30px; /* Reduce button height for smaller screens */
-    }
-    /* Add more adjustments for tablets and smaller screens */
-    nav .logo {
-        margin: 0 10px; /* Reduce margin for the logo */
-    }
-    .logo .menu-icon {
-        font-size: 20px; /* Reduce menu icon size */
-    }
-    .logo .logo-name {
-        font-size: 18px; /* Reduce logo name size */
-    }
+@media (max-width: 768px) {
+  header {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .search {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .search input {
+    width: 100%;
+  }
+
+  .search .btn {
+    width: 80px;
+    height: 40px;
+  }
+
+  #logoHeader,
+  #conheader,
+  body header {
+    background-color: #E7FAF6;
+  }
+
+  nav .logo {
+    margin: 0 10px;
+  }
+
+  .logo .menu-icon {
+    font-size: 20px;
+  }
+
+  .logo .logo-name {
+    font-size: 18px;
+  }
+
+  nav .sidebar {
+    width: 200px;
+    padding: 10px 0;
+  }
+
+  .sidebar-content .list .nav-link {
+    padding: 10px;
+  }
+
+  .custom-button1,
+  .custom-button2 {
+    width: 80px;
+    height: 30px;
+  }
 }
