@@ -1,3 +1,26 @@
+// sidebar
+document.getElementById("home").addEventListener("click", function() {
+  window.location.href = "index.html";
+});
+
+document.getElementById("cari").addEventListener("click", function() {
+  window.location.href = "carikost.html";
+});
+
+document.getElementById("simpan").addEventListener("click", function() {
+  window.location.href = "simpan.html";
+});
+
+document.getElementById("jual").addEventListener("click", function() {
+  window.location.href = "jualKos.html";
+});
+
+document.getElementById("profil").addEventListener("click", function() {
+  window.location.href = "profile.html";
+});
+
+
+// navBar
 const navBar = document.querySelector("nav"),
 menuBtn = document.querySelectorAll(".menu-icon"),
 overlay = document.querySelector(".overlay");
@@ -69,7 +92,7 @@ navBar.classList.remove("open");
         title: "Kos Putri Permata Buah Batu",
         cardText1: "15",
         cardText2: "1500"
-    },
+    }
   ];
 
     // Event listener for search input
