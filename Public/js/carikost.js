@@ -197,13 +197,12 @@ filterButtons.forEach(button => {
     bookmarkIcon.style.marginLeft = "180px";
     bookmarkIcon.style.top = "-100px";
     
-    
+// untuk simpan kost    
 // Event listener untuk menangani klik tombol bookmark
 function handleBookmarkClick(data) {
   const key = `bookmark_${data.title.replace(/ /g, '_')}_${Date.now()}`; // Membuat kunci unik dengan menambahkan timestamp
   localStorage.setItem(key, JSON.stringify(data)); // Simpan data kartu yang dibookmark
 }
-
 
 // Tambahkan event listener pada gambar yang digunakan untuk bookmark
 bookmarkIcon.addEventListener("click", () => {
@@ -217,7 +216,8 @@ bookmarkIcon.addEventListener("click", () => {
     handleRemoveBookmark(data); // Panggil fungsi untuk menghapus kartu yang dibookmark
   }
 });
-    
+//akhir untuk simpan kost
+   
     // untuk menambahkan ke dalam cardBody
     cardBody.appendChild(cardTitle);
     cardBody.appendChild(cardText1);
