@@ -129,6 +129,7 @@
         </section>
     </header>
     <!--Navbar End-->
+    <!-- body -->
     <div class="container" id="conbody">
         <div class="row justify-content-center">
             <div class="col">
@@ -262,7 +263,7 @@
             <div class="col-md-6 offset-sm-6" id="harga">
                 <div class="card" id="cardHarga" style="width: 390px; height: 194px;">
                     <div class="card-body">
-                        <h5 class="card-title">Rp. 15.000.000/tahun</h5>
+                        <h5 class="card-title" style="text-align: center;" id="harga-tahun">RP 15.000.000</h5>
                         <div class="row ">
                             <div class="col-md-6">
                                 <div class="dropdown">
@@ -272,7 +273,7 @@
                                         <span class="text-color"> Pertahun</span>
                                     </button>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Perbulan</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="ubahHarga()">Perbulan</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -290,20 +291,55 @@
                             </div>
                         </div>
                         <br>
-                        <a href="#" class="btn btn-outline-success d-block mx-auto bi bi-whatsapp"> whatsapp</a>
+                        <a href="https://api.whatsapp.com/send?phone=0895621914880"
+                            class="btn btn-outline-success d-block mx-auto bi bi-whatsapp">WhatsApp</a>
                         <!-- Menggunakan "d-block mx-auto" untuk mengatur tombol di tengah -->
                     </div>
                 </div>
             </div>
+            <script>
+                // Simpan harga perbulan dan harga pertahun dalam variabel
+                var hargaPerbulan = "1.250.000";
+                var hargaPertahun = "15.000.000";
+                var tampilkanHargaPertahun = false; // Menggunakan variabel untuk melacak tampilan harga
 
+                function tampilkanHarga() {
+                    // Mengambil elemen tombol "Perbulan" dan "Pertahun" berdasarkan class
+                    var tombolPerbulan = document.querySelector('.dropdown-item');
+                    var tombolPertahun = document.querySelector('.dropdown-toggle .text-color');
+
+                    // Mengambil elemen harga berdasarkan id
+                    var hargaElement = document.getElementById("harga-tahun");
+
+                    if (tampilkanHargaPertahun) {
+                        // Menampilkan harga pertahun
+                        hargaElement.innerHTML = "RP " + hargaPertahun;
+                        tombolPerbulan.textContent = "Perbulan";
+                        tombolPertahun.textContent = "Pertahun";
+                    } else {
+                        // Menampilkan harga perbulan
+                        hargaElement.innerHTML = "RP " + hargaPerbulan;
+                        tombolPerbulan.textContent = "Pertahun";
+                        tombolPertahun.textContent = "Perbulan";
+                    }
+                }
+
+                function ubahHarga() {
+                    tampilkanHargaPertahun = !tampilkanHargaPertahun; // Toggle variabel
+                    // Tampilkan harga yang sesuai
+                    tampilkanHarga();
+                }
+            </script>
         </div>
     </div>
+<!-- body end -->
     <br>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
     <script src="../js/detailKos.js"></script>
+<!-- footer -->
     <footer class="footer">
         <div class="container" id="footer">
             <div class="row">
@@ -361,5 +397,5 @@
         </div>
     </footer>
 </body>
-
+<!-- footer end -->
 </html>
