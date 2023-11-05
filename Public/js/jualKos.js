@@ -1,3 +1,4 @@
+// sidebar start
 const navBar = document.querySelector("nav"),
 menuBtn = document.querySelectorAll(".menu-icon"),
 overlay = document.querySelector(".overlay");
@@ -12,3 +13,6 @@ menuBtn.addEventListener("click", () => {
 overlay.addEventListener("click", () => {
 navBar.classList.remove("open");
 });
+// sidebar end
+
+
