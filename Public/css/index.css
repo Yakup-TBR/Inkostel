@@ -237,6 +237,7 @@ header .logo {
     background-color: #E7FAF6; 
 }
 
+/*
 .about-img img{
     width: 70%; 
     height: auto; 
@@ -244,10 +245,20 @@ header .logo {
     margin: 0 auto; 
     margin-top: 5px;
  }
+ */
+ 
+ #recomend{
+    padding-bottom: 30px;
+ }
+
+ #cardAbout{
+    color: black;
+ }
 
 .about-text h1 {
     font-weight: bold;
     color: #85DAC8;
+    padding-left: 10px;  
 }
 
 .about-text h2 {
@@ -259,13 +270,18 @@ header .logo {
 .about-text p {
     font-size: 16px; 
     line-height: 1.6; 
-    /* font-weight: bold; */
+    padding-left: 10px; 
 }
 
 .kenapa-section{
     padding-top: 30px; 
     background-color: #ffffff;
     padding-bottom: 30px;
+}
+
+.kenapa-text h1 {
+    font-weight: bold;
+    color: #85DAC8;  
 }
 
 #kenapa .about-img img{
