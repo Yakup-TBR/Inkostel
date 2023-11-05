@@ -1,8 +1,8 @@
-body{
+
+body {
     display: flex;
     flex-direction: column;
 }
-
 
 header {
     width: 100%;
@@ -14,7 +14,6 @@ header {
     z-index: 50;
     background-color: #E7FAF6;
 }
-
 /* search */
 .search {
     border-radius: 10px;
@@ -398,9 +397,26 @@ hr {
 }
 
 
-/* akhir */
-
-
-
-
-
+@media screen and (max-width: 768px) {
+    /* Adjust any specific styles for tablets and mobile devices here */
+    header {
+        height: 60px; /* Reduce header height for smaller screens */
+    }
+    .search {
+        width: 100%; /* Full width search input for tablets and mobile */
+    }
+    .search .btn {
+        width: 30px; /* Reduce button width for smaller screens */
+        height: 30px; /* Reduce button height for smaller screens */
+    }
+    /* Add more adjustments for tablets and smaller screens */
+    nav .logo {
+        margin: 0 10px; /* Reduce margin for the logo */
+    }
+    .logo .menu-icon {
+        font-size: 20px; /* Reduce menu icon size */
+    }
+    .logo .logo-name {
+        font-size: 18px; /* Reduce logo name size */
+    }
+}
