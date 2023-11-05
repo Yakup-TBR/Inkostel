@@ -234,7 +234,7 @@ header .logo {
 }
 
 h1{
-    padding-left: 17%;
+    
     padding-top: 7px;
 }
 
@@ -303,14 +303,6 @@ h1{
   box-sizing: border-box; /* Untuk mempertahankan padding dalam perhitungan lebar dan tinggi */
 }
 
-/* Untuk mengatur posisi absolut jika diperlukan */
-.top {
-  top: 5%; /* Atur sesuai kebutuhan */
-}
-
-.left {
-  left: 5%; /* Atur sesuai kebutuhan */
-}
 
 #harga{
     margin-top: -200px;
