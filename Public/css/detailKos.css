@@ -303,6 +303,18 @@ h1{
   box-sizing: border-box; /* Untuk mempertahankan padding dalam perhitungan lebar dan tinggi */
 }
 
+.fasilitas .info-section2,
+.fasilitas .info-section3 {
+  font-size: 16px; /* Atur ukuran font dasar */
+}
+
+
+@media (max-width: 768px) {
+  .fasilitas .info-section2,
+  .fasilitas .info-section3 {
+    font-size: 14px; /* Atur ukuran font untuk layar lebih kecil */
+  }
+}
 
 #harga{
     margin-top: -200px;
