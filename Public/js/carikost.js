@@ -203,8 +203,6 @@ filterButtons.forEach(button => {
             localStorage.removeItem(`bookmark_${index}`);
         }
 
-        // Setelah mengklik bookmark, pindahkan ke halaman penyimpanan
-        window.location.href = 'simpan.html';
     });
     
 
