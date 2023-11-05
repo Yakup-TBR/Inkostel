@@ -47,39 +47,38 @@
                     <i class='bx bx-menu menu-icon'></i>
                     <span class="logo-name">InKostel</span>
             </div>
-
                 <div class="sidebar-content">
                     <ul class="lists">
                         <li class="list">
-                            <a href="#" class="nav-link">
+                            <a href="index.html" class="nav-link">
                                 <i class='bx bx-home-alt icon'></i>
                                 <span class="link">Home</span>
                             </a>
                         </li>
 
                         <li class="list">
-                            <a href="#" class="nav-link">
+                            <a href="carikost.html" class="nav-link">
                                 <i class='bx bx-search icon'></i>
                                 <span class="link">Cari Kos</span>
                             </a>
                         </li>
 
                         <li class="list">
-                            <a href="#" class="nav-link">
+                            <a href="simpan.html" class="nav-link">
                                 <i class='bx bx-archive-in icon'></i>
                                 <span class="link">Kos Tersimpan</span>
                             </a>
                         </li>
 
                         <li class="list">
-                            <a href="#" class="nav-link">
+                            <a href="jualKos.html" class="nav-link">
                                 <i class='bx bx-message-square-add icon'></i>
                                 <span class="link">Jual Kos</span>
                             </a>
                         </li>
 
                         <li class="list">
-                            <a href="#" class="nav-link">
+                            <a href="profile.html" class="nav-link">
                                 <i class='bx bx-user-circle icon'></i>
                                 <span class="link">Profile</span>
                             </a>
@@ -103,6 +102,7 @@
         </section>
     </header>
     <!--Navbar End-->
+    <!--Script Navbar Start-->
     <script>
         const navBar = document.querySelector("nav"),
               menuBtn = document.querySelectorAll(".menu-icon"),
@@ -119,9 +119,10 @@
             navBar.classList.remove("open");
         });
     </script>
+    <!---Script Navbar End-->
     <!--Isi-->
     <div class="container light-style flex-grow-1 container-p-y">
-        <div class="card overflow-hidden" style="padding-left: 80px; padding-top: 25px; padding-right: 20px; padding-bottom: 20px;">
+        <div class="card">
             <div class="row no-gutters row-bordered row-border-light">
                 <div class="col-md-12 pt-10">
                     <div class="container-fluid">
@@ -151,26 +152,37 @@
                         <h4 class="font-weight-bold">Profil</h4>
                     </div>
                     <div class="card-body">
+                        <label class="form-label"><h6 class="font-weight-bold" style="padding-top: 10px;">Nama Lengkap</h6></label>
                         <div class="form-group">
-                            <label class="form-label"><h6 class="font-weight-bold">Nama Lengkap</h6></label>
-                            <input type="text" class="form-control mb-1" value="Supri Makmur" id="userInput" oninput="changeButtonColor()">
+                            <input type="text" class="form-control mb-1" value="Supri Makmur" id="nameInput" oninput="changeButtonColor()">
                         </div>
-                        <div class="form-group" style="padding-top: 10px;">
-                            <label class="form-label"><h6 class="font-weight-bold">Username</h6></label>
-                            <input type="text" class="form-control mb-1" value="supri.maklo" id="userInput" oninput="changeButtonColor()">
+                        <div id="nameWarning" class="text-danger" style="padding-top: 10px;"></div>
+                    
+                        <label class="form-label"><h6 class="font-weight-bold" style="padding-top: 15px;">Username</h6></label>
+                        <div class="form-group">
+                            <input type="text" class="form-control mb-1" value="supri.maklo" id="usernameInput" oninput="changeButtonColor()">
                         </div>
-                        <div class="form-group" style="padding-top: 10px;">
-                            <label class="form-label"><h6 class="font-weight-bold">Alamat Email</h6></label>
-                            <input type="text" id="editableInput" class="form-control" id="userInput" value="supri.maklo@gmail.com" oninput="changeButtonColor()">
+                        <div id="usernameWarning" class="text-danger" style="padding-top: 10px;"></div>
+                    
+                        <label class="form-label"><h6 class="font-weight-bold"  style="padding-top: 15px;">Alamat Email</h6></label>
+                        <div class="form-group">
+                            <input type="text" id="emailInput" class="form-control" value="supri.maklo@gmail.com" oninput="changeButtonColor()">
                         </div>
-                        <div class="form-group" style="padding-top: 10px;">
-                            <label class="form-label"><h6 class="font-weight-bold">Nomor Telepon</h6></label>
-                            <input type="text" id="editableInput" class="form-control mb-1" value="+1 234 567 890" id="userInput" oninput="changeButtonColor()">
+                        <div id="emailWarning" class="text-danger" style="padding-top: 10px;"></div>
+                    
+                        <label class="form-label"><h6 class="font-weight-bold"  style="padding-top: 15px;">Nomor Telepon</h6></label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-default">+62</span>
+                            </div>
+                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" value="895 329 917 984" id="phone" oninput="runtwofunction()">
                         </div>
+                        <div id="phoneWarning" class="text-danger" style="padding-top: 10px;"></div>
+                        
                         <div style="padding-bottom: 50px; padding-top: 25px;">
                             <button type="button" class="btn btn-outline-primary2" id="saveButton" onclick="saveForm()">Simpan</button>
                         </div>
-                    </div>
+                    </div>                    
                 </div>
             </div>
         </div>

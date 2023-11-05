@@ -89,11 +89,20 @@
 /* content */
 .container-lg {
   width: 1000px;
-  height: 1189px;
-  position: relative;
-  left: 100px;
+  height: 650px;
+  left: 30px;
   top: -500px;
+  position: relative;
 }
+
+#noHP i {
+  font-style: unset;
+}
+
+#Rp i {
+  font-style: unset;
+}
+
 /* end content */
 
 
@@ -101,11 +110,18 @@
   font-weight: bold; 
 }
 
-@media (max-width: 768px) {
-    .header {
-      width: 100px; 
+/* @media (max-width: 768px) {
+    .container-lg {
+      padding-bottom: 50px;
+      margin-left: 200px;
+      width: 400px;
     }
-}
+
+    .header {
+      margin-right: 300px;
+      width: 400px;
+    }
+} */
 
 /* sidebar */
 .sidebar {
@@ -197,16 +213,7 @@
 }
 
 /* Tambahkan border di sebelah kanan sidebar */
-.sidebar::after {
-  content: "";
-  display: block;
-  width: 3px; /* Lebar garis pemisah */
-  background-color: #00000070; /* Warna garis pemisah */
-  height: 95%;
-  position: absolute;
-  margin-left: 225px;
-  top: 195px;
-}
+
 
 /*footer start*/
 .footer{

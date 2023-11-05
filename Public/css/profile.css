@@ -4,7 +4,6 @@ body{
     flex-direction: column;
 }
 
-
 header {
     width: 100%;
     height: 80px;
@@ -14,6 +13,10 @@ header {
     position: static;
     z-index: 50;
     background-color: #E7FAF6;
+}
+
+.text-end{
+    visibility: hidden;
 }
 
 /* search */
@@ -230,6 +233,14 @@ header .logo {
 
 /*Header End*/
 /*Main Start*/
+
+.card{
+    padding-left: 150px; 
+    padding-top: 25px; 
+    padding-right: 20px; 
+    padding-bottom: 20px;
+}
+
 .input-group-btn {
     display: flex;
     align-items: center;

@@ -1,234 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+body{
+  overflow-x: hidden;
+}
+
 /* header */
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px; 
-  }
-  
-  /* logo navbar */
-  .logo img {
-    flex: 2;
-    text-transform: uppercase;
-    width: 150px;
-    height: auto;
-    margin-left: 40px;
-    margin-top: 10px;
-  }
-  
-  /* search */
-  .search {
-    border-radius: 10px;
-    flex: 1;
-    width: 600px;
-    height: auto;
-    display: flex;
-    align-items: center;
-    margin-top: 15px;
-    margin-left: 0px;
-  }
-  
-  .search input {
-    border: 2px solid #C0EEE4; 
-  }
-  
-  /* button search */
-  .search .btn{ 
-    border-radius: 10px;
-    color: white;
-    background-color: #41EBC6;
-    margin-left: 0px;
-    width: 40px; 
-    height: 40px; 
-  }
-  
-  /* button nama user*/
-  .nav-item button {
-    color: #fff;
-    background-color: #41EBC6;
-    padding: 5px;
-    margin-right: 10px;
-    margin-top: 15px;
-  }
-  
-  
-  /* navbar */
-  .nav-item {
-    display: flex;
-    align-items: center;
-  }
-  
-  
-  .nav-link img {
-    width: 50px;
-    border-radius: 50%;
-    margin-right: 30px; 
-    margin-top: 15px;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px; 
+}
 
-  /* button dibawah search */
+/* logo navbar */
+.logo img {
+  flex: 2;
+  text-transform: uppercase;
+  width: 150px;
+  height: auto;
+  margin-left: 40px;
+  margin-top: 10px;
+}
+
+/* search */
+.search {
+  border-radius: 10px;
+  flex: 1;
+  width: 600px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-left: 0px;
+}
+
+.search input {
+  border: 2px solid #C0EEE4; 
+}
+
+/* button search */
+.search .btn{ 
+  border-radius: 10px;
+  color: white;
+  background-color: #41EBC6;
+  margin-left: 0px;
+  width: 40px; 
+  height: 40px; 
+}
+
+/* button nama user*/
+.nav-item button {
+  color: #fff;
+  background-color: #41EBC6;
+  padding: 5px;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+
+/* navbar */
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+
+.nav-link img {
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 30px; 
+  margin-top: 15px;
+}
+
+/* button dibawah search */
 .filter-button {
-    text-align: center; /* Mengatur teks tombol di tengah */
-    margin-top: 10px; /* Jarak atas antara filter-button dan daftar card (sesuaikan sesuai kebutuhan) */
-  }
-  
-  .filter-button button {
-    color: white;
-    background-color: #41EBC6;
-    margin: 0 5px; /* Memberikan jarak antara tombol */
-    width: 200px;
-  }
-  
+  text-align: center; /* Mengatur teks tombol di tengah */
+  margin-top: 10px; /* Jarak atas antara filter-button dan daftar card (sesuaikan sesuai kebutuhan) */
+}
+
+.filter-button button {
+  color: white;
+  background-color: #41EBC6;
+  margin: 0 5px; /* Memberikan jarak antara tombol */
+  width: 200px;
+}
+
 /* sidebar */
 .sidebar {
-    font-family: 'Poppins', sans-serif;
-    left: 0px;
-    width: 210px;
-    border: 3px solid #41EBC6;
-    margin-left: 20px;
-    border-radius: 10px;
-    margin-top: 60px;
-    transition: all .5s ease;
-  }
-  
-  .sidebar ul {
-    height: 50px; /* Sesuaikan tinggi sesuai kebutuhan */
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  
-  .sidebar ul a {
-    color: #41EBC6;
-    border: 1px solid #41EBC6;
-    border-radius: 5px;
-    width: 170px;
-    display: flex; /* Menggunakan display flex untuk mengatur tinggi elemen */
-    align-items: center; /* Mengatur elemen ke tengah secara vertikal */
-    margin-left: 20px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-  }
-  
-  .sidebar ul a i {
-    color: #41EBC6;
-    width: 30px;
-    margin-left: 10px;
-    align-items: center;
-  }
-  
-  /* profile */
-  .sidebar ul a img {
-    border: 1px solid #41EBC6;
-    margin-left: 10px; /* Mengatur margin kiri yang sesuai */
-  }
-  
-  /* Hover pada tautan di sidebar */
-  .sidebar ul a:hover {
-    background-color: #41EBC6; /* Ganti warna latar belakang saat di-hover */
-    color: #fff; /* Ganti warna teks saat di-hover */
-  }
-  
-  /* Mengubah warna ikon saat di-hover */
-  .sidebar ul a:hover i {
-    color: #fff; /* Ganti warna ikon saat di-hover */
-  }
-  
+  font-family: 'Poppins', sans-serif;
+  left: 0px;
+  width: 210px;
+  border: 3px solid #41EBC6;
+  margin-left: 20px;
+  border-radius: 10px;
+  margin-top: 60px;
+  transition: all .5s ease;
+}
 
-  
-  /* Tambahkan border di sebelah kanan sidebar */
-  .sidebar::after {
-    content: "";
-    display: block;
-    width: 3px; /* Lebar garis pemisah */
-    background-color: #00000070; /* Warna garis pemisah */
-    height: 80%;
-    position: absolute;
-    margin-left: 225px;
-    top: 195px;
-  }
-  
-  #consid{
-    margin-left: -5px;
-  }
-  /*sidebar end*/
+.sidebar ul {
+  height: 50px; /* Sesuaikan tinggi sesuai kebutuhan */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-    
-  /*container card */
+.sidebar ul a {
+  color: #41EBC6;
+  border: 1px solid #41EBC6;
+  border-radius: 5px;
+  width: 170px;
+  display: flex; /* Menggunakan display flex untuk mengatur tinggi elemen */
+  align-items: center; /* Mengatur elemen ke tengah secara vertikal */
+  margin-left: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
 
-  #conmain{
-    margin-left: 300px;
-    padding: 15px;  
-    padding-left: -200px;
-  }
-  
-  /*ukuran card */
-  .card {
-    border-radius: 10px;
-    border: 3px solid #41EBC6;
-    width: 250px;
-    height: 270px; /* Tinggikan card agar memiliki jarak yang cukup */
-    margin-right: 0; 
-    margin-left: -30px;
-    margin-bottom: 480px; /* Mengatur margin bawah untuk memberi jarak vertikal antara card */
-    margin-top: -480px;
-    
+.sidebar ul a i {
+  color: #41EBC6;
+  width: 30px;
+  margin-left: 10px;
+  align-items: center;
+}
 
-  }
-  
-  .col-md-3 {
-    margin: -5px;
-  }
-  
-  /* Aturan CSS untuk border dan gambar di dalamnya */
-  .border-image {
-    border: 3px solid #ccc; /* Ganti warna dan ketebalan sesuai kebutuhan */
-    padding: 0; /* Jarak antara border gambar dan border container */
-    border-radius: 10px;
-    margin: 5px;
-  }
-  
-  .border-image img{
-    width: 150px;
-    height: 180px;
-  }
-  
-  .card-title{
-    margin-top: -10px;
-  }
-  
-  .card-text{
-    margin-top: 0px;
-    font-weight:bold;
-    font-size: larger;
-    color: #41EBC6;
-  }
-  
-  .card-text::after {
-    content: "jt/thn ";
-    color: #41EBC6;
-  }
-  
-  /* untuk card text dan button */
-  .card .card-text,
-  .card i {
-    color: #41EBC6;
-  }
-  
-  .card .btn i {
-    color: #41EBC6;
-    font-size: 30px; /* Atur ukuran ikon sesuai kebutuhan */
-  }
-  /* end card */
-  
+/* profile */
+.sidebar ul a img {
+  border: 1px solid #41EBC6;
+  margin-left: 10px; /* Mengatur margin kiri yang sesuai */
+}
+
+/* Hover pada tautan di sidebar */
+.sidebar ul a:hover {
+  background-color: #41EBC6; /* Ganti warna latar belakang saat di-hover */
+  color: #fff; /* Ganti warna teks saat di-hover */
+}
+
+/* Mengubah warna ikon saat di-hover */
+.sidebar ul a:hover i {
+  color: #fff; /* Ganti warna ikon saat di-hover */
+}
+
+/* Mengubah warna ikon dan warna border ketika elemen memiliki teks "Jual" */
+.sidebar ul a:contains("Jual") {
+  color: red; 
+}
+
+/* Merubah warna ikon */
+.sidebar ul a:contains("Jual") i {
+  color: red; 
+}
+
+/* Merubah warna border */
+.sidebar ul a:contains("Jual") {
+  border-color: red; 
+}
+
+#consid{
+  margin-left: -5px;
+}
+/*sidebar end*/
+
+/*container card */
+#conmain{
+  margin-left: 300px;
+  padding: 15px;  
+  padding-left: -200px;
+  height: 300px;
+}
+
+/*ukuran card */
+.card {
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  border: 3px solid #41EBC6;
+  width: 250px;
+  height: 350px;
+  margin-right: 0; 
+  margin-left: -30px;
+  margin-bottom: 450px; 
+  margin-top: -435px;
+}
+
+.col-md-3 {
+  margin: -5px;
+}
+
+/* Aturan CSS untuk border dan gambar di dalamnya */
+.border-image {
+  border: 3px solid #ccc; 
+  padding: 0; 
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.border-image img{
+  width: 150px;
+  height: 180px;
+}
+
+.card-title{
+  margin-top: 0;
+  font-weight: bold;
+  font-size: larger;
+  color: #000000;
+}
+
+.card-text1{
+  margin-top: 0px;
+  font-weight:bold;
+  font-size: larger;
+  color: #41EBC6;
+}
+
+.card-text2{
+  margin-top: 0px;
+  font-weight:bold;
+  font-size: larger;
+  color: #41EBC6;
+}
+
+.card-text1::after {
+  content: "jt/thn ";
+  color: #41EBC6;
+}
+
+/* end card */
 
 
 /*footer start*/
 .footer{
-	background-color: #E7FAF6;
+	  background-color: #E7FAF6;
     color: #000000;
-    padding: 20px 0;
-    position: static; /*bisa absolute / static*/
+    padding: 55px 0;
+    position: static; 
     bottom: 0;
 }
 
@@ -252,9 +257,9 @@
 }
 
 .footer-col a {
-    text-decoration: none; /* Menghapus garis bawah */
-    color: #333; /* Mengganti warna teks */
-    font-weight: normal; /* Mengganti ketebalan font (misalnya, menjadi normal) */
+    text-decoration: none;  
+    color: #333; 
+    font-weight: normal; 
 }
 
 .logo-footer img {
@@ -279,12 +284,9 @@
     color: black;
 }
 
-
 hr {
     border: 1px solid #000; /* Ganti warna, lebar, dan gaya garis sesuai kebutuhan */
 }
-
-
 
 .social-links a {
     font-size: 10px;

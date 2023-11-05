@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
+body{
+  overflow-x: hidden;
+}
 
 /* header */
 .header {
@@ -68,8 +71,6 @@
   margin-right: 30px; 
   margin-top: 15px;
 }
-
-
 
 /* button dibawah search */
 .filter-button {
@@ -154,18 +155,6 @@
   border-color: red; 
 }
 
-/* Tambahkan border di sebelah kanan sidebar */
-.sidebar::after {
-  content: "";
-  display: block;
-  width: 3px; /* Lebar garis pemisah */
-  background-color: #00000070; /* Warna garis pemisah */
-  height: 95%;
-  position: absolute;
-  margin-left: 225px;
-  top: 195px;
-}
-
 #consid{
   margin-left: -5px;
 }
@@ -176,18 +165,21 @@
   margin-left: 300px;
   padding: 15px;  
   padding-left: -200px;
+  height: 300px;
 }
 
 /*ukuran card */
 .card {
+  display: flex;
   border-radius: 10px;
+  flex-direction: column;
   border: 3px solid #41EBC6;
   width: 250px;
-  height: 270px; /* Tinggikan card agar memiliki jarak yang cukup */
+  height: 350px;
   margin-right: 0; 
   margin-left: -30px;
-  margin-bottom: 480px; /* Mengatur margin bawah untuk memberi jarak vertikal antara card */
-  margin-top: -480px;
+  margin-bottom: 450px; 
+  margin-top: -435px;
 }
 
 .col-md-3 {
@@ -196,8 +188,8 @@
 
 /* Aturan CSS untuk border dan gambar di dalamnya */
 .border-image {
-  border: 3px solid #ccc; /* Ganti warna dan ketebalan sesuai kebutuhan */
-  padding: 0; /* Jarak antara border gambar dan border container */
+  border: 3px solid #ccc; 
+  padding: 0; 
   border-radius: 10px;
   margin: 5px;
 }
@@ -208,40 +200,40 @@
 }
 
 .card-title{
-  margin-top: -10px;
+  margin-top: 0;
+  font-weight: bold;
+  font-size: larger;
+  color: #000000;
 }
 
-.card-text{
+.card-text1{
   margin-top: 0px;
   font-weight:bold;
   font-size: larger;
   color: #41EBC6;
 }
 
-.card-text::after {
+.card-text2{
+  margin-top: 0px;
+  font-weight:bold;
+  font-size: larger;
+  color: #41EBC6;
+}
+
+.card-text1::after {
   content: "jt/thn ";
   color: #41EBC6;
 }
 
-/* untuk card text dan button */
-.card .card-text,
-.card i {
-  color: #41EBC6;
-}
-
-.card .btn i {
-  color: #41EBC6;
-  font-size: 30px; /* Atur ukuran ikon sesuai kebutuhan */
-}
 /* end card */
 
 
 /*footer start*/
 .footer{
-	background-color: #E7FAF6;
+	  background-color: #E7FAF6;
     color: #000000;
-    padding: 20px 0;
-    position: static; /*bisa absolute / static*/
+    padding: 55px 0;
+    position: static; 
     bottom: 0;
 }
 
@@ -265,9 +257,9 @@
 }
 
 .footer-col a {
-    text-decoration: none; /* Menghapus garis bawah */
-    color: #333; /* Mengganti warna teks */
-    font-weight: normal; /* Mengganti ketebalan font (misalnya, menjadi normal) */
+    text-decoration: none;  
+    color: #333; 
+    font-weight: normal; 
 }
 
 .logo-footer img {
