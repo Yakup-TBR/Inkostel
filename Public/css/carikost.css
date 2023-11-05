@@ -107,6 +107,7 @@ nav .logo {
   font-weight: 500;
 }
 
+
 nav .sidebar{
   position: fixed;
   top: 0;
@@ -161,15 +162,6 @@ nav.open .sidebar {
 
 .lists .nav-link:hover .icon,
 .lists .nav-link:hover .link {
-  color: #FFF;
-}
-
-.nav-link:hover {
-  background-color: #E44E4E;
-}
-
-.nav-link:hover .icon,
-.nav-link:hover .link {
   color: #FFF;
 }
 
