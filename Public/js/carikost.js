@@ -193,6 +193,7 @@ filterButtons.forEach(button => {
                 title: data.title,
                 cardText1: data.cardText1,
                 cardText2: data.cardText2,
+                imageSrc: data.imageSrc,
             };
             localStorage.setItem(`bookmark_${index}`, JSON.stringify(kostData));
         } else {
@@ -203,8 +204,6 @@ filterButtons.forEach(button => {
             localStorage.removeItem(`bookmark_${index}`);
         }
 
-        // Setelah mengklik bookmark, pindahkan ke halaman penyimpanan
-        window.location.href = 'simpan.html';
     });
     
 

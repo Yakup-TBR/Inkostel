@@ -1,3 +1,14 @@
+// JavaScript untuk mengubah warna saat teks adalah "Jual"
+const elements = document.querySelectorAll(".sidebar ul a");
+elements.forEach(element => {
+    if (element.innerText.includes("Jual")) {
+        element.style.color = "#E29578"; // Merubah warna teks menjadi merah
+        element.style.borderColor = "#E29578"; // Merubah warna border menjadi merah
+        element.querySelector("i").style.color = "#E29578"; // Merubah warna ikon menjadi merah
+    }
+});
+
+
 // Ambil elemen kontainer untuk kartu yang disimpan
 const savedCardsContainer = document.getElementById("saved-cards");
 
@@ -11,37 +22,43 @@ for (let i = 0; i < localStorage.length; i++) {
 }
 
 // Fungsi untuk membuat dan menambahkan kartu yang disimpan
-// Di dalam fungsi createSavedCard(data, key), tambahkan kunci kartu sebagai argumen
+// menambahkan kunci kartu sebagai argumen
 function createSavedCard(data, key) {
-    const cardCol = document.createElement("div");
-    cardCol.classList.add("col-md-3", "mb-4");
+  const cardCol = document.createElement("div");
+  cardCol.classList.add("col-md-3", "mb-4");
 
-    const card = document.createElement("div");
-    card.classList.add("card");
+  const card = document.createElement("div");
+  card.classList.add("card");
 
-    const cardBody = document.createElement("div");
-    cardBody.classList.add("card-body");
+  const cardBody = document.createElement("div");
+  cardBody.classList.add("card-body");
 
-    const cardTitle = document.createElement("h5");
-    cardTitle.classList.add("card-title");
-    cardTitle.textContent = data.title;
+  // Tambahkan gambar kartu dari data yang tersimpan
+  const cardImage = document.createElement("img");
+  cardImage.src = data.imageSrc; // Ambil URL gambar dari data
+  cardImage.classList.add("card-img-top"); // Atur kelas sesuai dengan kebutuhan
 
-    const cardText1 = document.createElement("p");
-    cardText1.classList.add("card-text1");
-    cardText1.textContent = data.cardText1;
+  const cardTitle = document.createElement("h5");
+  cardTitle.classList.add("card-title");
+  cardTitle.textContent = data.title;
 
-    const cardText2 = document.createElement("p");
-    cardText2.classList.add("card-text2");
-    cardText2.textContent = data.cardText2;
+  const cardText1 = document.createElement("p");
+  cardText1.classList.add("card-text1");
+  cardText1.textContent = data.cardText1;
 
-    cardBody.appendChild(cardTitle);
-    cardBody.appendChild(cardText1);
-    cardBody.appendChild(cardText2);
+  const cardText2 = document.createElement("p");
+  cardText2.classList.add("card-text2");
+  cardText2.textContent = data.cardText2;
 
-    card.appendChild(cardBody);
-    cardCol.appendChild(card);
+  cardBody.appendChild(cardImage); // Tambahkan gambar ke dalam kartu
+  cardBody.appendChild(cardTitle);
+  cardBody.appendChild(cardText1);
+  cardBody.appendChild(cardText2);
 
-    savedCardsContainer.appendChild(cardCol);
+  card.appendChild(cardBody);
+  cardCol.appendChild(card);
+
+  savedCardsContainer.appendChild(cardCol);
 
     // Buat tombol "Hapus"
     const deleteButton = document.createElement("button");
