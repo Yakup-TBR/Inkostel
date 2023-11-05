@@ -119,7 +119,7 @@ filterButtons.forEach(button => {
 
 
   // Fungsi untuk membuat dan menambahkan kartu ke dalam elemen kontainer
-  function createCard(data) {
+  function createCard(data, index) {
     const cardContainer = document.querySelector("#conmain .row");
     const cardCol = document.createElement("div");
     cardCol.classList.add("col-md-3", "mb-4");
@@ -182,15 +182,29 @@ filterButtons.forEach(button => {
     bookmarkIcon.style.top = "-100px";
     
     
-    // Menambahkan event listener untuk mengubah ikon bookmark saat diclick
-    bookmarkIcon.addEventListener("click", () => {
+      // Menambahkan event listener untuk mengubah ikon bookmark saat diclick
+      bookmarkIcon.addEventListener("click", () => {
         if (bookmarkIcon.classList.contains("bi-bookmark")) {
             bookmarkIcon.classList.remove("bi-bookmark");
             bookmarkIcon.classList.add("bi-bookmark-fill");
+
+            // Simpan data card Kost yang di-bookmark ke Local Storage
+            const kostData = {
+                title: data.title,
+                cardText1: data.cardText1,
+                cardText2: data.cardText2,
+            };
+            localStorage.setItem(`bookmark_${index}`, JSON.stringify(kostData));
         } else {
             bookmarkIcon.classList.remove("bi-bookmark-fill");
             bookmarkIcon.classList.add("bi-bookmark");
+
+            // Hapus data card Kost dari Local Storage jika sudah tidak di-bookmark
+            localStorage.removeItem(`bookmark_${index}`);
         }
+
+        // Setelah mengklik bookmark, pindahkan ke halaman penyimpanan
+        window.location.href = 'simpan.html';
     });
     
 
@@ -205,7 +219,9 @@ filterButtons.forEach(button => {
   }
 
   // Panggil createCard untuk setiap data card
-  cardData.forEach(createCard);
+  cardData.forEach((data, index) => {
+  createCard(data, index);
+});
 
 
 
