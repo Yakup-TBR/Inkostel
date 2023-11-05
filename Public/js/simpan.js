@@ -36,7 +36,7 @@ function createSavedCard(data, key) {
   // Tambahkan gambar kartu dari data yang tersimpan
   const cardImage = document.createElement("img");
   cardImage.src = data.imageSrc; // Ambil URL gambar dari data
-  cardImage.classList.add("card-img-top"); // Atur kelas sesuai dengan kebutuhan
+  cardImage.classList.add("card-img-top"); // Atur kelas 
 
   const cardTitle = document.createElement("h5");
   cardTitle.classList.add("card-title");
@@ -48,12 +48,21 @@ function createSavedCard(data, key) {
 
   const cardText2 = document.createElement("p");
   cardText2.classList.add("card-text2");
-  cardText2.textContent = data.cardText2;
+  const cardText2Value = parseInt(data.cardText2);
 
+    if (cardText2Value >= 1000) {
+    cardText2.textContent = (cardText2Value / 1000) + " KM";
+  } else {
+    cardText2.textContent = cardText2Value + " Meter";
+  }
   cardBody.appendChild(cardImage); // Tambahkan gambar ke dalam kartu
   cardBody.appendChild(cardTitle);
   cardBody.appendChild(cardText1);
   cardBody.appendChild(cardText2);
+
+  cardImage.addEventListener("click", () => {
+    window.location.href = 'detailKos.html'; //mengarahkan ke url gambar
+  });
 
   card.appendChild(cardBody);
   cardCol.appendChild(card);
