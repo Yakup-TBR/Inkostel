@@ -13,40 +13,32 @@
   <body>
     <!-- navbar start -->
     <header>
-        <nav>
-            <div class="logo" id="logoHeader">
-                <i class='bx bx-menu menu-icon'></i>    
+        <nav class="navbar-fluid fixed-top navbar-expand-lg"id="logoHeader">
+            <div class="container logo" id="containerLogo">
+                <i class='bx bx-menu menu-icon'></i>   
 
-                <div class="container" id="conHeader">
-                    <div class="row">
-        
-                        <div class="col-md-4 logo" id="inkostel">
-                            <img src="../img/logo_inkostel.png" alt="Logo KosTel">
-                        </div>
-                
-                        <div class="col-md-4 text-center">
-                            <div class="search">
-                                <input class="form-control mr-sm-2" type="search" placeholder="Cari Kos disini..!" aria-label="Cari">
-                                <button type="button" class="btn">
-                                  <i class="bi bi-search"></i>
-                                </button>
-                              </div>
-                        </div>
-                
-                        <div class="col-md-4 text-end" id="button-container">
-                            <button type="button" class="btn btn-success custom-button1" id="loginButton">Login</button>
-                        </div>
-                        
+                <img src="../img/logo_inkostel.png" class=""alt="Logo KosTel" id="imgHeader">
+
+                <div class="col-md-4 text-center ms-auto" id="searchBar">
+                    <div class="search">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Cari Kos disini..!" aria-label="Cari">
+                        <button type="button" class="btn">
+                        <i class="bi bi-search"></i>
+                        </button>
                     </div>
                 </div>
-            </div>
+
+                <div class="col-md-4 text-end ms-auto" id="button-container">
+                    <button type="button" class="btn btn-success custom-button1" id="loginButton">Login</button>
+                </div>  
+            </div> 
 
             <!-- SideBar Menu -->
             <div class="sidebar">
                 <div class="logo">
                     <i class='bx bx-menu menu-icon'></i>
                     <span class="logo-name">InKostel</span>
-            </div>
+                </div>
 
                 <div class="sidebar-content">
                     <ul class="lists">
@@ -97,12 +89,13 @@
                 </div>
             </div>
         </nav>
-
-    <!-- Overlay -->
+        <!-- Overlay -->
         <section class="overlay">
         </section>
     </header>
-    <!--Navbar End-->
+        
+    </header>
+    <!-- Navbar End -->
 
     <!-- isi -->
     <section class="about-section" id="atas">
