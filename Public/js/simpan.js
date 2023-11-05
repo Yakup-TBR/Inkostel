@@ -58,6 +58,10 @@ function createSavedCard(data, key) {
   cardBody.appendChild(cardText1);
   cardBody.appendChild(cardText2);
 
+  cardImage.addEventListener("click", () => {
+    window.location.href = 'detailKos.html'; //mengarahkan ke url gambar
+  });
+
   // Buat tombol "Hapus"
   const deleteButton = document.createElement("button");
   deleteButton.textContent = "Hapus";
