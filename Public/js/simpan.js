@@ -1,4 +1,7 @@
-
+// Event listener untuk tampilkan kartu yang disimpan
+document.addEventListener('DOMContentLoaded', function () {
+  showSavedCards();
+});
 
 // Tampilkan kartu yang disimpan dari Local Storage
 function showSavedCards() {
