@@ -13,7 +13,8 @@ menuBtn.addEventListener("click", () => {
 overlay.addEventListener("click", () => {
 navBar.classList.remove("open");
 });
-  // Data card
+
+// Data card
   const cardData = [
     {
         carouselId: "carouselExample1",
@@ -70,6 +71,13 @@ navBar.classList.remove("open");
         title: "Kos Putri Permata Buah Batu",
         cardText1: "15",
         cardText2: "1500"
+    },
+    {
+      carouselId: "carouselExample9",
+      imageSrc: "../img/gambar kos.jpg",
+      title: "Kos Putri Permata Buah Batu",
+      cardText1: "15",
+      cardText2: "1500"
     }
   ];
 

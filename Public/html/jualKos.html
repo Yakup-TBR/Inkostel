@@ -43,72 +43,71 @@
                           </a>
                     </div>   
             </div>
-        </div>
-        
+        </div> 
         <!-- SideBar Menu -->
         <div class="sidebar">
-            <div class="logo">
-              <i class='bx bx-menu menu-icon'></i>
-              <span class="logo-name">InKostel</span>
-            </div>
+          <div class="logo">
+            <i class='bx bx-menu menu-icon'></i>
+            <span class="logo-name">InKostel</span>
+          </div>
 
-            <div class="sidebar-content">
-                <ul class="lists">
+          <div class="sidebar-content">
+              <ul class="lists">
 
-                    <li class="list">
-                        <a href="../html/index.html" class="nav-link">
-                            <i class='bx bx-home-alt icon'></i>
-                            <span class="link">Home</span>
-                        </a>
-                    </li>
-
-                    <li class="list">
-                        <a href="../html/carikost.html" class="nav-link">
-                            <i class='bx bx-search icon'></i>
-                            <span class="link">Cari Kost</span>
-                        </a>
-                    </li>
-
-                    <li class="list">
-                        <a href="../html/simpan.html" class="nav-link">
-                            <i class='bx bx-archive-in icon'></i>
-                            <span class="link">Kos Tersimpan</span>
-                        </a>
-                    </li>
-
-                    <li class="list">
-                      <a href="../html/jualKos.html" class="nav-link">
-                          <i class='bx bx-message-square-add icon'></i>
-                          <span class="link">Jual Kos</span>
+                  <li class="list">
+                      <a href="../html/index.html" class="nav-link">
+                          <i class='bx bx-home-alt icon'></i>
+                          <span class="link">Home</span>
                       </a>
-                    </li>
+                  </li>
 
-                    <li class="list">
-                        <a href="../html/profile.html" class="nav-link">
-                          <i class='bx bx-user-circle icon'></i>
-                          <span class="link">Profile</span>
-                        </a>
-                    </li>
-                </ul>
+                  <li class="list">
+                      <a href="../html/carikost.html" class="nav-link">
+                          <i class='bx bx-search icon'></i>
+                          <span class="link">Cari Kost</span>
+                      </a>
+                  </li>
 
-                <div class="bottom-content">
-                    <li class="list">
-                        <a href="#" class="nav-link">
-                            <i class='bx bx-log-out icon'></i>
-                            <span class="link">Log Out</span>
-                        </a>
-                    </li>
-                </div>
-            </div>
-        </div>
-    </nav>
+                  <li class="list">
+                      <a href="../html/simpan.html" class="nav-link">
+                          <i class='bx bx-archive-in icon'></i>
+                          <span class="link">Kos Tersimpan</span>
+                      </a>
+                  </li>
 
-    <!-- Overlay -->
-    <section class="overlay"></section>
+                  <li class="list">
+                    <a href="../html/jualKos.html" class="nav-link">
+                        <i class='bx bx-message-square-add icon'></i>
+                        <span class="link">Jual Kos</span>
+                    </a>
+                  </li>
+
+                  <li class="list">
+                      <a href="../html/profile.html" class="nav-link">
+                        <i class='bx bx-user-circle icon'></i>
+                        <span class="link">Profile</span>
+                      </a>
+                  </li>
+              </ul>
+
+              <div class="bottom-content">
+                  <li class="list">
+                      <a href="#" class="nav-link">
+                          <i class='bx bx-log-out icon'></i>
+                          <span class="link">Log Out</span>
+                      </a>
+                  </li>
+              </div>
+          </div>
+      </div>
+  </nav>
+
+  <!-- Overlay -->
+  <section class="overlay"></section>
 </header>
 <!--Navbar End-->
 
-    <!-- main -->
+    <!-- main start -->
     <section id="JualKosForm">
       <div class="container">
         <div class="text-center mt-5">
@@ -125,26 +124,32 @@
                 <span class="input-group-text">
                   <i class="bi bi-person-fill"></i>
                 </span>
-                <input type="text" class="form-control" id="Nama" placeholder="e.g. Mamancodet">
+                <input type="text" class="form-control" id="Nama" placeholder="e.g. Mamancodet" required>
               </div>
               
-
               
               <label for="Email" class="form-label">Email Address:</label>
               <div class="mb-4 input-group">
                 <span class="input-group-text">
                   <i class="bi bi-envelope-fill"></i>
                 </span>
-                <input type="Email" class="form-control" id="Email" placeholder="e.g. Mamancodet@example.com">
+                <input type="Email" class="form-control" id="Email" placeholder="e.g. Mamancodet@example.com" required>
               </div>
               
+              <label for="namakost" class="form-label">Nama Kost:</label>
+              <div class="mb-4 input-group">
+                <span class="input-group-text">
+                  <i class="bi bi-house-fill"></i>
+                </span>
+                <input type="text" class="form-control" id="namakost" placeholder="e.g. Kost Putra Pandita" required>
+              </div>
 
               <label for="Alamat" class="form-label">Alamat:</label>
               <div class="mb-4 input-group">
                 <span class="input-group-text">
                   <i class="bi bi-geo-alt-fill"></i>
                 </span>
-                <input type="text" class="form-control" id="Alamat" placeholder="e.g. Sulanjana No 45 Blok H1">
+                <input type="text" class="form-control" id="Alamat" placeholder="e.g. Sulanjana No 45 Blok H1" required>
               </div>
 
 
@@ -153,13 +158,14 @@
                 <span class="input-group-text" id="noHP">
                   <i> +62  </i>
                 </span>
-                <input type="text" class="form-control" id="Nomor" placeholder="">
+                <input type="tel" class="form-control" id="Nomor" placeholder="e.g. 081234567890" pattern="[0-9]{10,15}" required>
               </div>
               
             
               <label for="Ukuran" class="form-label">Pilih Ukuran Kamar:</label>
-              <select class="form-select" id="Ukuran">
-                <option value="20x30" selected>20x30</option>
+              <select class="form-select" id="Ukuran" required>
+                <option value="" disabled selected>Pilih ukuran kamar</option>
+                <option value="20x30">20x30</option>
                 <option value="20x40">20x40</option>
                 <option value="30x20">30x20</option>
               </select>
@@ -214,29 +220,33 @@
                 <span class="input-group-text" id="Rp">
                   <i> Rp </i>
                 </span>
-                <input type="text" class="form-control" id="Harga" placeholder="e.g. 1.000.000.">
+                <input type="text" class="form-control" id="Harga" placeholder="e.g. 1.000.000." pattern="\d{1,3}(\.\d{3})*" required>
               </div>
               
 
               <label for="InputGambar" class="form-label">Unggah Tampilan Kamar</label>
-              <input class="form-control" type="file" id="InputGambar" multiple>
+              <input class="form-control" type="file" id="InputGambar" multiple required>
 
 
               <div class="form-floating mb-4 mt-4">
-                <textarea  id="Deskripsi" class="form-control" style="height: 140px;"></textarea>
+                <textarea id="Deskripsi" class="form-control" style="height: 140px;" required></textarea>
                 <label for="Deskripsi" class="form-label">Deskripsi...</label>
               </div>
               
               
+              
               <div class="mb-4 text-center">
-                <button type="submit" class="btn btn-secondary">Submit</button>
+                <button type="submit" class="btn btn-secondary" formaction="../html/detailKos.html">Submit</button>
+                
+                
               </div>
               
             </form>
       </div>
     </section>
+    <!-- main end -->
 
-    <!--Footer-->
+    <!--Footer start-->
     <footer class="footer">
       <div class="container" id="footer">
           <div class="row">
@@ -291,7 +301,7 @@
           <p>Copyright @ 2023 Kelompok 5 - Web Programming, InKosTel</p>
       </div>
   </footer>
-  <!--Akhir Footer--> 
+  <!--Footer end--> 
     
     
     <script src="../Bootstrap/js/bootstrap.min.js"></script>

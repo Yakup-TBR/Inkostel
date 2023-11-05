@@ -156,7 +156,6 @@ nav.open .sidebar {
   background-color: #6DD6BF;
 }
 
-
 .overlay {
   position: fixed;
   top: 0;
@@ -241,96 +240,7 @@ header .logo {
     }
 } */
 
-/* sidebar */
-.sidebar {
-  font-family: 'Poppins', sans-serif;
-  left: 0px;
-  width: 210px;
-  border: 3px solid #41EBC6;
-  margin-left: 20px;
-  border-radius: 10px;
-  margin-top: 60px;
-  transition: all .5s ease;
-}
 
-.sidebar ul {
-  height: 50px; /* Sesuaikan tinggi sesuai kebutuhan */
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.sidebar ul a {
-  color: #41EBC6;
-  border: 1px solid #41EBC6;
-  border-radius: 5px;
-  width: 170px;
-  display: flex; /* Menggunakan display flex untuk mengatur tinggi elemen */
-  align-items: center; /* Mengatur elemen ke tengah secara vertikal */
-  margin-left: 20px;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-.sidebar ul a i {
-  color: #41EBC6;
-  width: 30px;
-  margin-left: 10px;
-  align-items: center;
-}
-
-/* profile */
-.sidebar ul a img {
-  border: 1px solid #41EBC6;
-  margin-left: 10px; /* Mengatur margin kiri yang sesuai */
-}
-
-/* Hover pada tautan di sidebar */
-.sidebar ul a:hover {
-  background-color: #41EBC6; /* Ganti warna latar belakang saat di-hover */
-  color: #fff; /* Ganti warna teks saat di-hover */
-}
-
-/* Mengubah warna ikon saat di-hover */
-.sidebar ul a:hover i {
-  color: #fff; /* Ganti warna ikon saat di-hover */
-}
-
-/* Mengubah warna ikon dan warna border ketika elemen memiliki teks "Jual" */
-.sidebar ul a:contains("Jual") {
-  color: red; 
-}
-
-/* Merubah warna ikon */
-.sidebar ul a:contains("Jual") i {
-  color: red; 
-}
-
-/* Merubah warna border */
-.sidebar ul a:contains("Jual") {
-  border-color: red; 
-}
-
-.sidebarJual ul a {
-  color: #E29578;
-  border-color: #E29578;
-}
-
-.sidebarJual ul a i {
-  color: #E29578;
-}
-
-.sidebarJual ul a img {
-  border: 1px solid #E29578;
-  margin-left: 10px;
-}
-
-.sidebarJual ul a:hover {
-  background-color: #E29578;
-  color: #fff;
-}
-
-/* Tambahkan border di sebelah kanan sidebar */
 
 
 /*footer start*/
