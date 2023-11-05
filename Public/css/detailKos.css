@@ -315,6 +315,13 @@ h1{
 #harga{
     margin-top: -200px;
 }
+#cardHarga{
+    width: 100%;
+    max-width: 390px;
+}
+.card-title{
+    text-align: center;
+}
 .dropdown {
   margin: 5px; /* Atur margin untuk elemen dropdown */
   
