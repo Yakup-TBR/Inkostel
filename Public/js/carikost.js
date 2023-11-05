@@ -190,10 +190,10 @@ filterButtons.forEach(button => {
 
             // Simpan data card Kost yang di-bookmark ke Local Storage
             const kostData = {
+                imageSrc: data.imageSrc,
                 title: data.title,
                 cardText1: data.cardText1,
                 cardText2: data.cardText2,
-                imageSrc: data.imageSrc,
             };
             localStorage.setItem(`bookmark_${index}`, JSON.stringify(kostData));
         } else {
