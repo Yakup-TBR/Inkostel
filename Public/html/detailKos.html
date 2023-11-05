@@ -8,7 +8,6 @@
     <title>Inkostel</title>
     <!-- Bootstrap CSS -->
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/detailKos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,16 +25,14 @@
         <nav>
             <div class="logo" id="logoHeader">
                 <i class='bx bx-menu menu-icon'></i>
-
+    
                 <div class="container" id="conHeader">
                     <div class="row">
-
+    
                         <div class="col-md-4 logo">
-                            <a href="index.html">
-                                <img src="../img/logo_inkostel.png" alt="logo KosTel" id="logo_header">
-                            </a>
+                            <img src="../img/logo_inkostel.png" alt="Logo KosTel">
                         </div>
-
+    
                         <div class="col-md-4 text-center">
                             <div class="search">
                                 <input class="form-control mr-sm-2" type="search" placeholder="Cari Kos disini..!"
@@ -45,11 +42,11 @@
                                 </button>
                             </div>
                         </div>
-
+    
                         <div class="col-md-4 text-end" id="button-container">
                             <button type="button" class="btn btn-success custom-button1" id="loginButton">Login</button>
                         </div>
-
+    
                     </div>
                 </div>
                 <!-- SideBar Menu -->
@@ -58,44 +55,45 @@
                         <i class='bx bx-menu menu-icon'></i>
                         <span class="logo-name">InKostel</span>
                     </div>
+    
                     <div class="sidebar-content">
                         <ul class="lists">
                             <li class="list">
-                                <a href="index.html" class="nav-link">
+                                <a href="../html/index.html" class="nav-link">
                                     <i class='bx bx-home-alt icon'></i>
                                     <span class="link">Home</span>
                                 </a>
                             </li>
-
+    
                             <li class="list">
-                                <a href="carikost.html" class="nav-link">
+                                <a href="../html/carikost.html" class="nav-link">
                                     <i class='bx bx-search icon'></i>
                                     <span class="link">Cari Kos</span>
                                 </a>
                             </li>
-
+    
                             <li class="list">
-                                <a href="simpan.html" class="nav-link">
+                                <a href="../html/simpan.html" class="nav-link">
                                     <i class='bx bx-archive-in icon'></i>
                                     <span class="link">Kos Tersimpan</span>
                                 </a>
                             </li>
-
+    
                             <li class="list">
-                                <a href="jualKos.html" class="nav-link">
+                                <a href="../html/jualKos.html" class="nav-link">
                                     <i class='bx bx-message-square-add icon'></i>
                                     <span class="link">Jual Kos</span>
                                 </a>
                             </li>
-
+    
                             <li class="list">
-                                <a href="profile.html" class="nav-link">
+                                <a href="../html/profile.html" class="nav-link">
                                     <i class='bx bx-user-circle icon'></i>
                                     <span class="link">Profile</span>
                                 </a>
                             </li>
                         </ul>
-
+    
                         <div class="bottom-content">
                             <li class="list">
                                 <a href="#" class="nav-link">
@@ -107,24 +105,8 @@
                     </div>
                 </div>
         </nav>
-
+    
         <!-- Overlay -->
-        <script>
-            const navBar = document.querySelector("nav"),
-                menuBtn = document.querySelectorAll(".menu-icon"),
-                overlay = document.querySelector(".overlay");
-            console.log(navBar, menuBtn, overlay);
-
-            menuBtn.forEach(menuBtn => {
-                menuBtn.addEventListener("click", () => {
-                    navBar.classList.toggle("open");
-                });
-            });
-
-            overlay.addEventListener("click", () => {
-                navBar.classList.remove("open");
-            });
-        </script>
         <section class="overlay">
         </section>
     </header>
