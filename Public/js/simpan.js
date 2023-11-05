@@ -167,3 +167,20 @@ function showSavedCards() {
 
 // Panggil fungsi showSavedCards saat halaman "Simpan" dimuat
 window.addEventListener('load', showSavedCards);
+
+
+//Untuk sidebar muncul
+const navBar = document.querySelector("nav"),
+              menuBtn = document.querySelectorAll(".menu-icon"),
+              overlay = document.querySelector(".overlay");
+        console.log(navBar, menuBtn, overlay);
+
+        menuBtn.forEach(menuBtn => {
+            menuBtn.addEventListener("click", () => {
+                navBar.classList.toggle("open");
+            });
+        });
+
+        overlay.addEventListener("click", () => {
+            navBar.classList.remove("open");
+        });
