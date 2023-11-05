@@ -234,13 +234,13 @@ header .logo {
 }
 
 h1{
-    padding-left: 17%;
+    
     padding-top: 7px;
 }
 
 
 .text-color{
-  color: black; /* Ganti dengan warna yang Anda inginkan untuk teks */
+  color: black; 
   display: inline; /* Memastikan teks tetap berada di sebelah ikon */
 }
  .custom-scrollbar {
@@ -303,40 +303,93 @@ h1{
   box-sizing: border-box; /* Untuk mempertahankan padding dalam perhitungan lebar dan tinggi */
 }
 
-/* Untuk mengatur posisi absolut jika diperlukan */
-.top {
-  top: 5%; /* Atur sesuai kebutuhan */
+.fasilitas .info-section2,
+.fasilitas .info-section3 {
+  font-size: 16px; 
 }
 
-.left {
-  left: 5%; /* Atur sesuai kebutuhan */
+
+@media (max-width: 768px) {
+  .fasilitas .info-section2,
+  .fasilitas .info-section3 {
+    font-size: 14px; 
+  }
 }
 
-#harga{
-    margin-top: -200px;
+#harga {
+  margin-top: -200px; 
 }
-#cardHarga{
-    width: 100%;
-    max-width: 390px;
+
+#cardHarga {
+  width: 100%;
+  max-width: 400px; 
 }
-.card-title{
-    text-align: center;
+
+.card-title {
+  text-align: center;
 }
+
 .dropdown {
-  margin: 5px; /* Atur margin untuk elemen dropdown */
-  
+  margin: 5px; 
 }
 
 .dropdown-menu {
-  padding: 5px; /* Atur padding untuk elemen dropdown menu */
+  padding: 5px; 
 }
 
 .dropdown-item {
-  margin: 2px; /* Atur margin untuk elemen dropdown item */
+  margin: 2px; 
 }
 .dropdown :hover{
   background-color: #6DD6BF !important;
 }
+
+
+/* Media query untuk lebar layar  card harga 768px */
+@media (max-width: 768px) {
+  #harga {
+    margin-top: -200px; 
+  }
+  
+  #cardHarga {
+    max-width: 200px; 
+  }
+
+  .dropdown {
+    margin: 4px; 
+    
+    
+  }
+
+  .dropdown-menu {
+    padding: -5px; 
+    
+  }
+
+  .dropdown-item {
+    margin: 1px; 
+    
+  }
+  .btn {
+    width: 100%; 
+
+  }
+  .btn .text-color {
+    font-size: 12px; /* Sesuaikan ukuran teks */
+  }
+  .btn-outline-secondary{
+    max-width: 70px;
+
+  }
+  .dropdown-toggle{
+    max-width: 80px;
+  }
+  .dropdown-item a {
+    font-size: 5px; /* Sesuaikan ukuran font teks pada layar kecil */
+  }
+ 
+}
+
 /* body selesai */
 
 
