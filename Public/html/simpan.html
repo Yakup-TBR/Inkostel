@@ -1,409 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simpan</title>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css"> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="path/to/ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="../css/simpan.css">
-    <title>Simpan Kost</title>
-</head>
-<body>
+  </head>
+  <body>
+    
     <!-- header -->
     <div class="header">
-        <div class="logo">
-          <img src="../img/logo_inkostel.jpeg">
-        </div>
+      <div class="logo">
+        <img src="../img/logo_inkostel.png">
+      </div>
       
-        <form class="form-inline my-2 my-lg-0">
-          <div class="search">
-            <input class="form-control mr-sm-2" type="search" placeholder="Cari Kos disini..!" aria-label="Cari">
-            <button type="button" class="btn">
-              <i class="bi bi-search"></i>
-            </button>
-          </div>
-        </form>
-     
-        <div class="nav-item">
-          <button type="button" class="btn">
-            Supri Yanto
+      <form class="form-inline my-2 my-lg-0">
+        <div class="search">
+          <input class="form-control mr-sm-2" type="search" id="searchInput" placeholder="Cari Kos disini..!" autocomplete="off" aria-label="Cari">
+          <button id="searchButton" type="button" class="btn">
+            <i class="bi bi-search"></i>
           </button>
-          <a class="nav-link" href="#" id="profileButton">
-            <img src="../img/profile.png" style="width:50px; border-radius:50%;"/>
-            
-          </a>
         </div>
+      </form>
+   
+      <div class="nav-item">
+        <button type="button" class="btn">
+          Supri Kowalski
+        </button>
+        <a class="nav-link" href="#" id="profileButton">
+          <img src="../img/profile.png" style="width:50px; border-radius:50%;"/>
+        </a>
       </div>
-      <!-- end header -->
-  
-     <!-- Tombol Filter Pencarian -->
-     <div class="filter-button">
-        <button type="button" class="btn">Filter Pencarian</button>
-        <button type="button" class="btn">Terdekat</button>
-        <button type="button" class="btn">Termurah</button>
-        <button type="button" class="btn">Rekomendasi</button>
-      </div>
-  
-          <!-- sidebar -->
-    <div class="container" id="consid">
-        <div class="sidebar">
-        </br>
-        <ul><a href="../html/index.html"><i class="bi bi-house-door-fill"></i>Home</a></ul>
-        <ul><a href="../html/carikost.html"><i class="bi bi-search"></i>Cari</a></ul>
-        <ul><a href="../html/simpan.html"><i class="bi bi-file-earmark-arrow-down-fill"></i>Tersimpan</a></ul>
-        <ul><a href="../html/jualKos.html"><i class="bi bi-house-dash-fill"></i>Jual</a></ul>
-        </br>
-        </br>
-        </br>
-        </br>
-        <ul><a href="../html/profile.html"><img src="../img/profile.png" style="width:25px; border-radius:50%; margin-right: 10px; float: left;"/>profile</a></ul>
     </div>
-      </div> 
-     
-      <!-- end sidebar -->
+    <!-- end header -->
+
+    <!-- Tombol Filter Pencarian -->
+    <div class="filter-button">
+      <button type="button" class="btn" data-filter="semua">Semua</button>
+      <button type="button" class="btn" data-filter="terdekat">Terdekat</button>
+      <button type="button" class="btn" data-filter="termurah">Termurah</button>
+      <button type="button" class="btn" data-filter="putra">Putra</button>
+      <button type="button" class="btn" data-filter="putri">Putri</button>
+    </div>
+
+    <!-- sidebar -->
+    <div class="container" id="consid">
+      <div class="sidebar">
+      </br>
+      <ul><a href="../html/index.html"><i class="bi bi-house-door-fill"></i>Home</a></ul>
+      <ul><a href="../html/carikost.html"><i class="bi bi-search"></i>Cari</a></ul>
+      <ul><a href="../html/simpan.html"><i class="bi bi-file-earmark-arrow-down-fill"></i>Tersimpan</a></ul>
+      <ul><a href="../html/jualKos.html"><i class="bi bi-house-dash-fill"></i>Jual</a></ul>
+      </br>
+      </br>
+      </br>
+      </br>
+      <ul><a href="../html/profile.html"><img src="../img/profile.png" style="width:25px; border-radius:50%; margin-right: 10px; float: left;"/>profile</a></ul>
+  </div>
+    </div> 
+   
+    <!-- end sidebar -->
 
     <!-- main -->
-    <div class="container my-5"id="conmain">
-        <div class="row row-cols-1 row-cols-md-3 g-0">
-          <!-- card 1 -->
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <div class="border-image">
-                <div id="carouselExample1" class="carousel slide">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="../img/gambar kos.jpg" class="d-block w-100" alt="">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="../img/gambar kos.jpg" class="d-block w-100" alt="">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="../img/gambar kos.jpg" class="d-block w-100" alt="">
-                    </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">KOST QIQI</h5>
-                <p class="card-text">10</p>
-                <button type="button" class="btn">
-                  <i class="bi bi-chevron-compact-right"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <!-- card 2 -->
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <div class="border-image">
-                <div id="carouselExample2" class="carousel slide">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="../img/gambar kos.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="../img/gambar kos.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="../img/gambar kos.jpg" class="d-block w-100" alt="...">
-                    </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">KOST QIQI</h5>
-                <p class="card-text">10</p>
-              </div>
-            </div>
-          </div>
-          <!-- card 3 -->
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <div class="border-image">
-                <div id="carouselExample3" class="carousel slide">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="../img/gambar kos.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="../img/gambar kos.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="../img/gambar kos.jpg" class="d-block w-100" alt="...">
-                    </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">KOST QIQI</h5>
-                <p class="card-text">10</p>
-              </div>
-            </div>
-          </div>
-          <!-- card 4 -->
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <div class="border-image">
-                <div id="carouselExample4" class="carousel slide">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="../img/gambar kos.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="../img/gambar kos.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="../img/gambar kos.jpg" class="d-block w-100" alt="...">
-                    </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample4" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample4" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">KOST QIQI</h5>
-                <p class="card-text">10</p>
-              </div>
-            </div>
-          </div>
-          <!-- card 5 -->
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <div class="border-image">
-                <div id="carouselExample5" class="carousel slide">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="../img/gambar kos.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="../img/gambar kos.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="../img/gambar kos.jpg" class="d-block w-100" alt="...">
-                    </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample5" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample5" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">KOST QIQI</h5>
-                <p class="card-text">10</p>
-              </div>
-            </div>
-          </div>
-          <!-- card 6 -->
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <div class="border-image">
-                <div id="carouselExample6" class="carousel slide">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="../img/gambar kos.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="../img/gambar kos.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="../img/gambar kos.jpg" class="d-block w-100" alt="...">
-                    </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample6" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample6" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">KOST QIQI</h5>
-                <p class="card-text">10</p>
-              </div>
-            </div>
-          </div>
-          <!-- card 7 -->
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <div class="border-image">
-                <div id="carouselExample7" class="carousel slide">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="../img/gambar kos.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="../img/gambar kos.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="../img/gambar kos.jpg" class="d-block w-100" alt="...">
-                    </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample7" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample7" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">KOST QIQI</h5>
-                <p class="card-text">10</p>
-              </div>
-            </div>
-          </div>
-          <!-- card 8 -->
-          <div class="col-md-3 mb-4">
-            <div class="card">
-              <div class="border-image">
-                <div id="carouselExample8" class="carousel slide">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="../img/gambar kos.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="../img/gambar kos.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="../img/gambar kos.jpg" class="d-block w-100" alt="...">
-                    </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample8" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample8" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">KOST QIQI</h5>
-                <p class="card-text">10</p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="container my-5" id="conmain">
+      <div class="row row-cols-1 row-cols-md-3 g-0" id="saved-cards">
       </div>
-    </body>
-      <!-- end main -->
+    </div>
+    <!-- end main -->
+
     <!--Footer-->
     <footer class="footer">
-        <div class="container" id="footer">
-            <div class="row">
-
-                <div class="footer-col">
-                    <div class="logo-footer">
-                        <img src="../img/logo_inkostel.png" alt="logofooter" >
-                        <br> <br>
-                        <h5>About Us</h5>
-                        <p>InKosTel aplikasi untuk mencari informasi penjualan kos terbaik dan ternyaman di sekitar Telkom University</p>
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                
-                <div class="footer-col">
-                    <br> <br> <br>
-                    <h5>About</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#">About Us</a></li>
-                        <li class="mb-2"><a href="#">Product</a></li>
-                        <li class="mb-2"><a href="#">Features</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <br> <br> <br>
-                    <h5>Support</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#">FAQs</a></li>
-                        <li class="mb-2"><a href="#">Support Center</a></li>
-                        <li class="mb-2"><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <br> <br> <br>
-                    <h5>Services</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#">Help Center</a></li>
-                        <li class="mb-2"><a href="#">Text</a></li>
-                        <li class="mb-2"><a href="#">How & Works</a></li>
-                    </ul>
-                </div>
-
-            </div>
-            <hr>
-            <p>Copyright @ 2023 Kelompok 5 - Web Programming, InKosTel</p>
-        </div>
+      <div class="container" id="footer">
+          <div class="row">
+  
+              <div class="footer-col">
+                  <div class="logo-footer">
+                      <img src="../img/logo_inkostel.png" alt="logofooter" >
+                      <br> <br>
+                      <h5>About Us</h5>
+                      <p>InKosTel aplikasi untuk mencari informasi penjualan kos terbaik dan ternyaman di sekitar Telkom University</p>
+                      <div class="social-links">
+                          <a href="#"><i class="fab fa-facebook-f"></i></a>
+                          <a href="#"><i class="fab fa-twitter"></i></a>
+                          <a href="#"><i class="fab fa-instagram"></i></a>
+                      </div>
+                  </div>
+              </div>
+  
+              
+              <div class="footer-col">
+                  <br> <br> <br>
+                  <h5>About</h5>
+                  <ul class="list-unstyled">
+                      <li class="mb-2"><a href="#">About Us</a></li>
+                      <li class="mb-2"><a href="#">Product</a></li>
+                      <li class="mb-2"><a href="#">Features</a></li>
+                  </ul>
+              </div>
+  
+              <div class="footer-col">
+                  <br> <br> <br>
+                  <h5>Support</h5>
+                  <ul class="list-unstyled">
+                      <li class="mb-2"><a href="#">FAQs</a></li>
+                      <li class="mb-2"><a href="#">Support Center</a></li>
+                      <li class="mb-2"><a href="#">Contact Us</a></li>
+                  </ul>
+              </div>
+  
+              <div class="footer-col">
+                  <br> <br> <br>
+                  <h5>Services</h5>
+                  <ul class="list-unstyled">
+                      <li class="mb-2"><a href="#">Help Center</a></li>
+                      <li class="mb-2"><a href="#">Text</a></li>
+                      <li class="mb-2"><a href="#">How & Works</a></li>
+                  </ul>
+              </div>
+  
+          </div>
+          <hr>
+          <p>Copyright @ 2023 Kelompok 5 - Web Programming, InKosTel</p>
+      </div>
     </footer>
-    <!--Akhir Footer-->
+    <!--Akhir Footer--> 
 
-   <!-- script js -->
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-   <script>
-     // JavaScript untuk mengubah warna saat teks adalah "Jual"
-     const elements = document.querySelectorAll(".sidebar ul a");
-       elements.forEach(element => {
-           if (element.innerText.includes("Jual")) {
-               element.style.color = "#E29578"; // Merubah warna teks menjadi merah
-               element.style.borderColor = "#E29578"; // Merubah warna border menjadi merah
-               element.querySelector("i").style.color = "#E29578"; // Merubah warna ikon menjadi merah
-           }
-       });
- </script>
- 
+    <!-- script js -->
+    <script src="../js/simpan.js"></script>
+  </body>
 </html>
-
-
-
