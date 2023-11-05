@@ -14,100 +14,93 @@
 </head>
 <body>
     <!-- navbar start -->
-    <header>
-        <nav>
-            <div class="logo" id="logoHeader">
-                <i class='bx bx-menu menu-icon'></i>    
+  <header>
+    <nav class="navbar-fluid fixed-top navbar-expand-lg"id="logoHeader">
+        <div class="container logo" id="containerLogo">
+            <i class='bx bx-menu menu-icon'></i>   
 
-                <div class="container" id="conHeader">
-                    <div class="row">
-        
-                        <div class="col-md-4 logo">
-                            <a href="index.html">
-                                <img src="../img/logo_inkostel.png" alt="Logo KosTel">
-                            </a>
-                        </div>
-                
-                        <div class="col-md-4 text-center">
-                            <div class="search">
-                                <input class="form-control mr-sm-2" type="search" placeholder="Cari Kos disini..!" aria-label="Cari">
-                                <button type="button" class="btn">
-                                  <i class="bi bi-search"></i>
-                                </button>
-                              </div>
-                        </div>
-                
-                        <div class="col-md-4 text-end" id="button-container">
-                            <a class="nav-link" href="../html/profile.html" id="profileButton">
-                                <img src="../img/profile.png" style="width:50px; border-radius:50%;"/>
-                                <span class="xp-user-live"></span>
-                            </a>
-                        </div>
-                    </div>
-                        
+            <img src="../img/logo_inkostel.png" class=""alt="Logo KosTel" id="imgHeader">
+
+            <div class="col-md-4 text-center ms-auto" id="searchBar">
+                <div class="search">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Cari Kos disini..!" aria-label="Cari">
+                    <button type="button" class="btn">
+                    <i class="bi bi-search"></i>
+                    </button>
                 </div>
             </div>
-            <!-- SideBar Menu -->
-            <div class="sidebar">
-                <div class="logo">
-                    <i class='bx bx-menu menu-icon'></i>
-                    <span class="logo-name">InKostel</span>
-                </div>
-                <div class="sidebar-content">
-                    <ul class="lists">
-                        <li class="list">
-                            <a href="index.html" class="nav-link">
-                                <i class='bx bx-home-alt icon'></i>
-                                <span class="link">Home</span>
-                            </a>
-                        </li>
 
-                        <li class="list">
-                            <a href="carikost.html" class="nav-link">
-                                <i class='bx bx-search icon'></i>
-                                <span class="link">Cari Kos</span>
-                            </a>
-                        </li>
+            <div class="col-md-4 text-end ms-auto" id="button-container">
+                          <a class="nav-link" href="../html/profile.html" id="profileButton">
+                            <img src="../img/profile.png" style="width:50px; border-radius:50%;"/>
+                            <span class="xp-user-live"></span>
+                          </a>
+            </div>  
+        </div> 
 
-                        <li class="list">
-                            <a href="simpan.html" class="nav-link">
-                                <i class='bx bx-archive-in icon'></i>
-                                <span class="link">Kos Tersimpan</span>
-                            </a>
-                        </li>
+        <!-- SideBar Menu -->
+        <div class="sidebar">
+            <div class="logo">
+                <i class='bx bx-menu menu-icon'></i>
+                <span class="logo-name">InKostel</span>
+            </div>
 
-                        <li class="list">
-                            <a href="jualKos.html" class="nav-link">
-                                <i class='bx bx-message-square-add icon'></i>
-                                <span class="link">Iklan Kos</span>
-                            </a>
-                        </li>
+            <div class="sidebar-content">
+                <ul class="lists">
+                    <li class="list">
+                        <a href="../html/index.html" class="nav-link">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="link">Home</span>
+                        </a>
+                    </li>
 
-                        <li class="list">
-                            <a href="profile.html" class="nav-link">
-                                <i class='bx bx-user-circle icon'></i>
-                                <span class="link">Profile</span>
-                            </a>
-                        </li>
-                    </ul>
+                    <li class="list">
+                        <a href="../html/carikost.html" class="nav-link">
+                            <i class='bx bx-search icon'></i>
+                            <span class="link">Cari Kos</span>
+                        </a>
+                    </li>
 
-                    <div class="bottom-content">
-                        <li class="list">
-                            <a href="login.html" class="nav-link">
-                                <i class='bx bx-log-out icon'></i>
-                                <span class="link">Log Out</span>
-                            </a>
-                        </li>
-                    </div>
+                    <li class="list">
+                        <a href="../html/simpan.html" class="nav-link">
+                            <i class='bx bx-archive-in icon'></i>
+                            <span class="link">Kos Tersimpan</span>
+                        </a>
+                    </li>
+
+                    <li class="list">
+                        <a href="../html/jualKos.html" class="nav-link">
+                            <i class='bx bx-message-square-add icon'></i>
+                            <span class="link">Iklan Kos</span>
+                        </a>
+                    </li>
+
+                    <li class="list">
+                        <a href="../html/profile.html" class="nav-link">
+                            <i class='bx bx-user-circle icon'></i>
+                            <span class="link">Profile</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="bottom-content">
+                    <li class="list">
+                        <a href="#" class="nav-link">
+                            <i class='bx bx-log-out icon'></i>
+                            <span class="link">Log Out</span>
+                        </a>
+                    </li>
                 </div>
             </div>
-        </nav>
-
+        </div>
+    </nav>
     <!-- Overlay -->
-        <section class="overlay">
-        </section>
-    </header>
-    <!--Navbar End-->
+    <section class="overlay">
+    </section>
+</header>
+    
+</header>
+<!-- Navbar End -->
     <!--Script Navbar Start-->
     <script>
         const navBar = document.querySelector("nav"),
@@ -132,7 +125,7 @@
             <div class="row no-gutters row-bordered row-border-light">
                 <div class="col-md-12 pt-10">
                     <div class="container-fluid">
-                        <h1 class="font-weight-bold" style="padding-bottom: 50px;padding-top: 20px;">Hai, Supri Kowalski</h1>
+                        <h1 class="font-weight-bold" id="textHi" style="padding-bottom: 50px;padding-top: 70px;">Hai, Supri Kowalski</h1>
                         <h4 class="font-weight-bold">Profile Picture</h4>
                     </div>
                     <div class="card-body d-flex align-items-center">
