@@ -8,65 +8,6 @@ elements.forEach(element => {
     }
 });
 
-  // Data card
-  const cardData = [
-    {
-        carouselId: "carouselExample1",
-        imageSrc: "../img/gambar kos.jpg",
-        title: "Kos Putra PGA",
-        cardText1: "5",
-        cardText2: "500"
-    },
-    {
-        carouselId: "carouselExample2",
-        imageSrc: "../img/gambar kos.jpg",
-        title: "Kos Putra PGA",
-        cardText1: "15",
-        cardText2: "1500"
-    },
-    {
-        carouselId: "carouselExample3",
-        imageSrc: "../img/gambar kos.jpg",
-        title: "Kos Putra PGA",
-        cardText1: "5",
-        cardText2: "600"
-    },
-    {
-        carouselId: "carouselExample4",
-        imageSrc: "../img/gambar kos.jpg",
-        title: "Kos Putra PGA",
-        cardText1: "15",
-        cardText2: "2000"
-    },
-    {
-        carouselId: "carouselExample5",
-        imageSrc: "../img/gambar kos.jpg",
-        title: "Kos Putri Permata Buah Batu",
-        cardText1: "5",
-        cardText2: "1000"
-    },
-    {
-        carouselId: "carouselExample6",
-        imageSrc: "../img/gambar kos.jpg",
-        title: "Kos Putri Permata Buah Batu",
-        cardText1: "15",
-        cardText2: "600"
-    },
-    {
-        carouselId: "carouselExample7",
-        imageSrc: "../img/gambar kos.jpg",
-        title: "Kos Putri Permata Buah Batu",
-        cardText1: "5",
-        cardText2: "1500"
-    },
-    {
-        carouselId: "carouselExample8",
-        imageSrc: "../img/gambar kos.jpg",
-        title: "Kos Putri Permata Buah Batu",
-        cardText1: "15",
-        cardText2: "1500"
-    },
-  ];
 
 function displayItems(items) {
   const savedCardsContainer = document.getElementById("saved-cards");
@@ -86,27 +27,50 @@ document.getElementById('searchInput').addEventListener('input', (e) => {
   displayItems(filteredData);
 });
 
+// Event listener for search input
+document.getElementById('searchInput').addEventListener('input', () => {
+  const searchData = document.getElementById('searchInput').value.toLowerCase();
+  const savedCards = document.querySelectorAll('.card'); // Ambil semua kartu yang tersimpan
+
+  savedCards.forEach(card => {
+      const title = card.querySelector('.card-title').textContent.toLowerCase();
+      if (title.includes(searchData)) {
+          card.style.display = 'block'; // Tampilkan kartu yang cocok
+      } else {
+          card.style.display = 'none'; // Sembunyikan kartu yang tidak cocok
+      }
+  });
+});
+
 // Ambil semua tombol filter
 const filterButtons = document.querySelectorAll('.filter-button .btn');
 
 // Tambahkan event listener pada setiap tombol filter
 filterButtons.forEach(button => {
   button.addEventListener('click', () => {
-    const filterType = button.getAttribute('data-filter');
+    const filterType = button.getAttribute('data-filter'); // Dapatkan jenis filter dari atribut data-filter
+
+    // Ambil semua kartu yang tersimpan
+    const savedCards = document.querySelectorAll('.card');
 
     // Lakukan pemfilteran berdasarkan jenis filter
-    let filteredData = cardData;
-    if (filterType === 'putra') {
-      filteredData = cardData.filter(item => item.title.includes('Putra'));
-    } else if (filterType === 'putri') {
-      filteredData = cardData.filter(item => item.title.includes('Putri'));
-    } else if (filterType === 'termurah') {
-      filteredData = cardData.filter(item => parseInt(item.cardText1) <= 10);
-    } else if (filterType === 'terdekat') {
-      filteredData = cardData.filter(item => parseInt(item.cardText2) < 1000);
-    }
+    savedCards.forEach(card => {
+      card.style.display = 'block'; // Tampilkan semua data
 
-    displayItems(filteredData);
+      if (filterType !== 'semua') {
+        const cardText1 = parseInt(card.querySelector('.card-text1').textContent);
+        const cardText2 = parseInt(card.querySelector('.card-text2').textContent);
+
+        if (
+          (filterType === 'putra' && !card.querySelector('.card-title').textContent.toLowerCase().includes('putra')) ||
+          (filterType === 'putri' && !card.querySelector('.card-title').textContent.toLowerCase().includes('putri')) ||
+          (filterType === 'termurah' && cardText1 > 10) ||
+          (filterType === 'terdekat' && cardText2 < 1000)
+        ) {
+          card.style.display = 'none'; // Sembunyikan kartu yang tidak cocok dengan filter
+        }
+      }
+    });
   });
 });
 
@@ -153,11 +117,7 @@ function createSavedCard(data, key) {
   cardText2.classList.add("card-text2");
   const cardText2Value = parseInt(data.cardText2);
 
-    if (cardText2Value >= 1000) {
-    cardText2.textContent = (cardText2Value / 1000) + " KM";
-  } else {
-    cardText2.textContent = cardText2Value + " Meter";
-  }
+  
   cardBody.appendChild(cardImage); // Tambahkan gambar ke dalam kartu
   cardBody.appendChild(cardTitle);
   cardBody.appendChild(cardText1);
