@@ -12,54 +12,104 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/jualKos.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-  <!-- header -->
-  <div class="header">
-    <div class="logo">
-      <img src="../img/logo_inkostel.jpeg">
-    </div>
-  
-    <form class="form-inline my-2 my-lg-0">
-      <div class="search">
-        <input class="form-control mr-sm-2" type="search" placeholder="Cari Kos disini..!" aria-label="Cari">
-        <button type="button" class="btn">
-          <i class="bi bi-search"></i>
-        </button>
+  <!-- navbar start -->
+  <header>
+    <nav>
+        <div class="logo" id="logoHeader">
+            <i class='bx bx-menu menu-icon'></i>    
+            <div class="container" id="conHeader">
+                <div class="row">
+                    <div class="col-md-4 logo">
+                        <img src="../img/logo_inkostel.png" alt="Logo KosTel">
+                    </div>
+          
+                    <div class="col-md-4 text-center">
+                        <div class="search">
+                            <input class="form-control mr-sm-2" id="searchInput" type="search" placeholder="Cari Kos disini..!" aria-label="Cari">
+                            <button type="button" class="btn">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </div>
+          
+                    <div class="col-md-4 text-end" id="button-container">
+                        <h5 id="username">Supri</h5>
+                          <a class="nav-link" href="../html/profile.html" id="profileButton">
+                            <img src="../img/profile.png" style="width:50px; border-radius:50%;"/>
+                            <span class="xp-user-live"></span>
+                          </a>
+                    </div>   
+            </div>
+        </div> 
+        <!-- SideBar Menu -->
+        <div class="sidebar">
+          <div class="logo">
+            <i class='bx bx-menu menu-icon'></i>
+            <span class="logo-name">InKostel</span>
+          </div>
+
+          <div class="sidebar-content">
+              <ul class="lists">
+
+                  <li class="list">
+                      <a href="../html/index.html" class="nav-link">
+                          <i class='bx bx-home-alt icon'></i>
+                          <span class="link">Home</span>
+                      </a>
+                  </li>
+
+                  <li class="list">
+                      <a href="../html/carikost.html" class="nav-link">
+                          <i class='bx bx-search icon'></i>
+                          <span class="link">Cari Kost</span>
+                      </a>
+                  </li>
+
+                  <li class="list">
+                      <a href="../html/simpan.html" class="nav-link">
+                          <i class='bx bx-archive-in icon'></i>
+                          <span class="link">Kos Tersimpan</span>
+                      </a>
+                  </li>
+
+                  <li class="list">
+                    <a href="../html/jualKos.html" class="nav-link">
+                        <i class='bx bx-message-square-add icon'></i>
+                        <span class="link">Jual Kos</span>
+                    </a>
+                  </li>
+
+                  <li class="list">
+                      <a href="../html/profile.html" class="nav-link">
+                        <i class='bx bx-user-circle icon'></i>
+                        <span class="link">Profile</span>
+                      </a>
+                  </li>
+              </ul>
+
+              <div class="bottom-content">
+                  <li class="list">
+                      <a href="#" class="nav-link">
+                          <i class='bx bx-log-out icon'></i>
+                          <span class="link">Log Out</span>
+                      </a>
+                  </li>
+              </div>
+          </div>
       </div>
-    </form>
- 
-    <div class="nav-item">
-      <button type="button" class="btn">
-        Supri 
-      </button>
-      <a class="nav-link" href="#" id="profileButton">
-        <img src="../img/profile.png" style="width:50px; border-radius:50%;"/>
-        <span class="xp-user-live"></span>
-      </a>
-    </div>
-  </div>
-  <!-- end header -->
-  <!-- sidebar -->
-  <div class="sidebar">
-  </br>
-  <ul><a href="../html/index.html"><i class="bi bi-house-door-fill"></i>Home</a></ul>
-  <ul><a href="#"><i class="bi bi-search"></i>Cari</a></ul>
-  <ul><a href="#"><i class="bi bi-heart-fill"></i>Favorit</a></ul>
-  <ul><a href="#"><i class="bi bi-file-earmark-arrow-down-fill"></i>Tersimpan</a></ul>
-  <div class="sidebarJual">
-    <ul><a href="#"><i class="bi bi-house-dash-fill"></i>Jual</a></ul>
-  </div>
-  </br>
-  </br>
-  </br>
-  </br>
-  <ul><a href="#"><img src="../img/profile.png" style="width:25px; border-radius:50%; margin-right: 10px; float: left;"/>profile</a></ul>
-</div>
-<!-- end sidebar -->
-    <!-- main -->
+  </nav>
+
+  <!-- Overlay -->
+  <section class="overlay"></section>
+</header>
+<!--Navbar End-->
+
+    <!-- main start -->
     <section id="JualKosForm">
-      <div class="container-lg">
+      <div class="container">
         <div class="text-center mt-5">
           <h2>Join Sekarang Juga!</h2>
           <p>Isi Form Untuk Mendaftar</p>
@@ -74,26 +124,32 @@
                 <span class="input-group-text">
                   <i class="bi bi-person-fill"></i>
                 </span>
-                <input type="text" class="form-control" id="Nama" placeholder="e.g. Mamancodet">
+                <input type="text" class="form-control" id="Nama" placeholder="e.g. Mamancodet" required>
               </div>
               
-
               
               <label for="Email" class="form-label">Email Address:</label>
               <div class="mb-4 input-group">
                 <span class="input-group-text">
                   <i class="bi bi-envelope-fill"></i>
                 </span>
-                <input type="Email" class="form-control" id="Email" placeholder="e.g. Mamancodet@example.com">
+                <input type="Email" class="form-control" id="Email" placeholder="e.g. Mamancodet@example.com" required>
               </div>
               
+              <label for="namakost" class="form-label">Nama Kost:</label>
+              <div class="mb-4 input-group">
+                <span class="input-group-text">
+                  <i class="bi bi-house-fill"></i>
+                </span>
+                <input type="text" class="form-control" id="namakost" placeholder="e.g. Kost Putra Pandita" required>
+              </div>
 
               <label for="Alamat" class="form-label">Alamat:</label>
               <div class="mb-4 input-group">
                 <span class="input-group-text">
                   <i class="bi bi-geo-alt-fill"></i>
                 </span>
-                <input type="text" class="form-control" id="Alamat" placeholder="e.g. Sulanjana No 45 Blok H1">
+                <input type="text" class="form-control" id="Alamat" placeholder="e.g. Sulanjana No 45 Blok H1" required>
               </div>
 
 
@@ -102,13 +158,14 @@
                 <span class="input-group-text" id="noHP">
                   <i> +62  </i>
                 </span>
-                <input type="text" class="form-control" id="Nomor" placeholder="">
+                <input type="tel" class="form-control" id="Nomor" placeholder="e.g. 081234567890" pattern="[0-9]{10,15}" required>
               </div>
               
             
               <label for="Ukuran" class="form-label">Pilih Ukuran Kamar:</label>
-              <select class="form-select" id="Ukuran">
-                <option value="20x30" selected>20x30</option>
+              <select class="form-select" id="Ukuran" required>
+                <option value="" disabled selected>Pilih ukuran kamar</option>
+                <option value="20x30">20x30</option>
                 <option value="20x40">20x40</option>
                 <option value="30x20">30x20</option>
               </select>
@@ -163,29 +220,33 @@
                 <span class="input-group-text" id="Rp">
                   <i> Rp </i>
                 </span>
-                <input type="text" class="form-control" id="Harga" placeholder="e.g. 1.000.000.">
+                <input type="text" class="form-control" id="Harga" placeholder="e.g. 1.000.000." pattern="\d{1,3}(\.\d{3})*" required>
               </div>
               
 
               <label for="InputGambar" class="form-label">Unggah Tampilan Kamar</label>
-              <input class="form-control" type="file" id="InputGambar" multiple>
+              <input class="form-control" type="file" id="InputGambar" multiple required>
 
 
               <div class="form-floating mb-4 mt-4">
-                <textarea  id="Deskripsi" class="form-control" style="height: 140px;"></textarea>
+                <textarea id="Deskripsi" class="form-control" style="height: 140px;" required></textarea>
                 <label for="Deskripsi" class="form-label">Deskripsi...</label>
               </div>
               
               
+              
               <div class="mb-4 text-center">
-                <button type="submit" class="btn btn-secondary">Submit</button>
+                <button type="submit" class="btn btn-secondary" formaction="../html/detailKos.html">Submit</button>
+                
+                
               </div>
               
             </form>
       </div>
     </section>
+    <!-- main end -->
 
-    <!--Footer-->
+    <!--Footer start-->
     <footer class="footer">
       <div class="container" id="footer">
           <div class="row">
@@ -240,9 +301,10 @@
           <p>Copyright @ 2023 Kelompok 5 - Web Programming, InKosTel</p>
       </div>
   </footer>
-  <!--Akhir Footer--> 
+  <!--Footer end--> 
     
     
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="../Bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/jualKos.js"></script>
 </body>
 </html>

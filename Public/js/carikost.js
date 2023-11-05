@@ -13,7 +13,8 @@ menuBtn.addEventListener("click", () => {
 overlay.addEventListener("click", () => {
 navBar.classList.remove("open");
 });
-  // Data card
+
+// Data card
   const cardData = [
     {
         carouselId: "carouselExample1",
@@ -70,6 +71,13 @@ navBar.classList.remove("open");
         title: "Kos Putri Permata Buah Batu",
         cardText1: "15",
         cardText2: "1500"
+    },
+    {
+      carouselId: "carouselExample9",
+      imageSrc: "../img/gambar kos.jpg",
+      title: "Kos Putri Permata Buah Batu",
+      cardText1: "15",
+      cardText2: "1500"
     }
   ];
 
@@ -190,22 +198,32 @@ filterButtons.forEach(button => {
     bookmarkIcon.style.top = "-100px";
     
     
-    // agar berganti ketika icon bookmark diclick
-    bookmarkIcon.addEventListener("click", () => {
-        if (bookmarkIcon.classList.contains("bi-bookmark")) {
-            bookmarkIcon.classList.remove("bi-bookmark");
-            bookmarkIcon.classList.add("bi-bookmark-fill");
-        } else {
-            bookmarkIcon.classList.remove("bi-bookmark-fill");
-            bookmarkIcon.classList.add("bi-bookmark");
-        }
-    });
+// Event listener untuk menangani klik tombol bookmark
+function handleBookmarkClick(data) {
+  const key = `bookmark_${data.title.replace(/ /g, '_')}_${Date.now()}`; // Membuat kunci unik dengan menambahkan timestamp
+  localStorage.setItem(key, JSON.stringify(data)); // Simpan data kartu yang dibookmark
+}
+
+
+// Tambahkan event listener pada gambar yang digunakan untuk bookmark
+bookmarkIcon.addEventListener("click", () => {
+  if (bookmarkIcon.classList.contains("bi-bookmark")) {
+    bookmarkIcon.classList.remove("bi-bookmark");
+    bookmarkIcon.classList.add("bi-bookmark-fill");
+    handleBookmarkClick(data); // Panggil fungsi untuk menyimpan kartu yang dibookmark
+  } else {
+    bookmarkIcon.classList.remove("bi-bookmark-fill");
+    bookmarkIcon.classList.add("bi-bookmark");
+    handleRemoveBookmark(data); // Panggil fungsi untuk menghapus kartu yang dibookmark
+  }
+});
     
     // untuk menambahkan ke dalam cardBody
     cardBody.appendChild(cardTitle);
     cardBody.appendChild(cardText1);
     cardBody.appendChild(cardText2);
     cardBody.appendChild(bookmarkIcon);
+    
 
     // untuk menggabungkan semua ke card
     card.appendChild(cardBody);
@@ -215,8 +233,10 @@ filterButtons.forEach(button => {
     cardContainer.appendChild(cardCol);
   }
 
-  // untuk menjalankan fungsi
-  cardData.forEach(createCard);
+  // Panggil createCard untuk setiap data card
+  cardData.forEach((data, index) => {
+    createCard(data, index);
+  });
 
 
 
