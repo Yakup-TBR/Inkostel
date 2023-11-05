@@ -218,7 +218,7 @@ header .logo {
 /* filter button */
 .filter-button {
   text-align: center; 
-  margin-top: 10px; 
+  margin-top: 30px; 
 }
 
 .filter-button button {
@@ -232,7 +232,8 @@ header .logo {
 #conmain{
   margin-left: 140px;
   padding: 15px;  
-  height: 700px;
+  height: auto;
+  padding-bottom: 30px;
 }
 
 /*ukuran card */
@@ -244,21 +245,16 @@ header .logo {
   z-index: 99;
   border: 3px solid #41EBC6;
   width: 250px;
-  height: 350px;
+  height: 370px;
 }
 
 /* batas per card */
 .col-md-3 {
   margin: -5px;
+  height: auto;
 }
 
 /* Aturan CSS untuk border dan gambar di dalamnya */
-.border-image {
-  border: 3px solid #ccc; 
-  padding: 0; 
-  border-radius: 10px;
-  margin: 5px;
-}
 
 .border-image img{
   width: 150px;
@@ -298,9 +294,8 @@ header .logo {
 .footer{
 	  background-color: #E7FAF6;
     color: #000000;
-    padding: 55px 0;
-    position: static; 
-    bottom: 0;
+    padding: 20px 0;
+   
 }
 
 .logo-footer img {
@@ -415,7 +410,7 @@ hr {
   }
 
   nav .sidebar {
-    width: 100px;
+    width: 200px;
     padding: 10px 0;
   }
 
@@ -431,7 +426,7 @@ hr {
 
   .filter-button {
     text-align: center;
-    margin-top: 80px;
+    margin-top: 100px;
   }
 
   .filter-button button {
